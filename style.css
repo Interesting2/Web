@@ -2,6 +2,7 @@
 html {
     --full-width: 100%;
     --fav-color: black;
+    --w-white: #FCF6F5FF;
 }
 * {
     margin: 0;
@@ -13,7 +14,7 @@ html {
     position: fixed;
     width: var(--full-width);
     height: 10vh;
-
+    background: linear-gradient(#84CEEB, #C1C8E4);
 }
 
 
@@ -28,15 +29,23 @@ html {
 .nav-elem {
     width: var(--full-width);
     height: 100%;
-
 }
+
 
 .nav-link {
     text-decoration: none;
-    color: teal;
+    text-transform: uppercase;
+    font-size: 2vh;
+    color: #8860D0;
+    
+}
 
+.nav-link:hover {
+    cursor: pointer;
+    border-bottom: 2px solid black;
 }
 
 .nav-elem:last-child {
     text-align: right;
 }
+
