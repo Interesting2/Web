@@ -72,19 +72,23 @@ html {
 
 /* Side Menu */
 #main-side {
-    background-color: red;
+    background-color: black;
     height: 100%;
-    width: 40%;
-    float: right;
-}
-.side-item {
-    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;  
+    min-width: 500px;
 }
 
+.cross-menu {
+    color: white;
+    font-size: 5vh;
+    cursor: pointer;
+}
 
 
 /* Response Screen */
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1400px) {
     .nav-link {
         display: none;
     }
