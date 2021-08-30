@@ -23,7 +23,7 @@ html {
     list-style: none;
     display: flex;
     font-size: 2.5vh;
-    margin-top: 20px;
+    margin-top: 23px;
     align-items: center;
 }
 
@@ -33,16 +33,17 @@ html {
     height: 100%;
 }
 
-.nav-elem:nth-child(8) {
+.nav-elem:nth-child(9) {
     text-align: right;
 }
+
 
 .nav-link {
     text-decoration: none;
     font-size: 2.3vh;
     color: #8860D0;
-    
 }
+
 
 .nav-link:hover {
     cursor: pointer;
@@ -68,6 +69,18 @@ html {
     width: 50%;
     text-align: center;
 }
+
+/* Side Menu */
+#main-side {
+    background-color: red;
+    height: 100%;
+    width: 40%;
+    float: right;
+}
+.side-item {
+    display: block;
+}
+
 
 
 /* Response Screen */
