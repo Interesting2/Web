@@ -1,14 +1,21 @@
 /*          CSS Variables        */
-html {
+:root {
     --full-width: 100%;
     --fav-color: black;
     --w-white: #FCF6F5FF;
     --s-gap: 50%;
 }
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
 * {
     margin: 0;
     padding: 0;
 }
+/*   Nav Window    */
+
 
 /*                Navigation Bar                */
 .nav-container {
