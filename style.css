@@ -13,7 +13,9 @@ html, body{
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 /*   Nav Window    */
 
 
@@ -82,7 +84,7 @@ html, body{
     height: 100%;
     position: fixed;
     right: 0;
-    top: 0;  
+    top: 0;
     width: 0;
     animation-name: cool-effect;
     animation-duration: 5s;
