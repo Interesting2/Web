@@ -11,36 +11,60 @@
     </head>
 
     <body>
+        <div class="view-port"></div>
+        <div class="nav-container">
+            <ul class="nav-bar">
+                <li class="nav-elem">
+                    <i class="fa fa-shopping-cart"></i>
+                </li>
+                <div class="search">
+                  <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                  <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                 </button>
+               </div>
 
-        <div class="view-port">
-            <div class="nav-container">
-                <ul class="nav-bar">
-                    <li class="nav-elem">
-                        <i class="fa fa-shopping-cart"></i>
-                    </li>
-                    <li class="nav-elem"><a href="#" class="nav-link">Best Sellers</a></li>
-                    <li class="nav-elem"><a href="#" class="nav-link">New Products</a></li>
-                    <li class="nav-elem"><a href="#" class="nav-link">School Supplies</a></li>
-                    <li class="nav-elem"><a href="#" class="nav-link">Child Section</a></li>
-                    <li class="nav-elem"><a href="#" class="nav-link">Electronics</a></li>
-                    <li class="nav-elem"><a href="#" class="nav-link">Clothing</a></li>
-                    <li class="nav-elem"><a href="#" class="nav-link">Sports</a></li>
-                    <li class="nav-elem">
-                        <!--<a href="#" class="nav-link">Login</a>-->
-                        <a href="#" class="ham-menu" onclick="openMenu()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <li class="nav-elem">
+                    <!--<a href="#" class="nav-link">Login</a>-->
+                    <a href="#" class="ham-menu" onclick="openMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-            <div id="main-side" class="side-menu">
-                <div class="top-side">
-                    <a class="cross-menu" onclick="closeMenu()">&times;</a>
-                    <li class="account-info"> GangOf4 </li>
+        <div class="nav-elem-container">
+            <ul class="nav-elem-bar">
+                <li class="nav-elem"><a href="#" class="nav-link">Best Sellers</a></li>
+                <li class="nav-elem"><a href="#" class="nav-link">New Products</a></li>
+                <li class="nav-elem"><a href="#" class="nav-link">School Supplies</a></li>
+                <li class="nav-elem"><a href="#" class="nav-link">Child Section</a></li>
+                <li class="nav-elem"><a href="#" class="nav-link">Electronics</a></li>
+                <li class="nav-elem"><a href="#" class="nav-link">Clothing</a></li>
+                <li class="nav-elem"><a href="#" class="nav-link">Sports</a></li>
+            </ul>
+
+        </div>
+
+        <div id="main-side" class="side-menu">
+            <div class="top-side">
+                <a class="cross-menu" onclick="closeMenu()">&times;</a>
+                <div class="profile-container">
+                    <div class="profile-content">
+                        <img class="profile-pic" src="skymode.jpeg" alt="">
+                        <div class="profile-name">
+                            <li class="account-info"> Welcome Back PatrisiaPvP </li>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
+
             </div>
+
         </div>
+
     </body>
 </html>

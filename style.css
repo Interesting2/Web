@@ -15,34 +15,38 @@ html, body{
     padding: 0;
     box-sizing: border-box;
 }
+.view-port{
 
-/*   Nav Window    */
-
+}
 
 /*                Navigation Bar                */
 .nav-container {
-    position: fixed;
-    width: var(--full-width);
-    height: 8vh;
+    min-width: var(--full-width);
     background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%);
+    position: fixed;
+    min-height: 90px;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+
 
 
 .nav-bar {
     list-style: none;
     display: flex;
     font-size: 2.5vh;
-    margin-top: 23px;
-    align-items: center;
+
 }
 
 .nav-elem {
     /*width: var(--s-gap);*/
-    width: 100%;
-    height: 100%;
+    min-height: 100%;
+    width: 10%;
+    margin-top: 30px;
 }
 
-.nav-elem:nth-child(9) {
+.nav-elem:nth-child(3) {
     text-align: right;
     padding-right: 35px;
 }
@@ -50,14 +54,56 @@ html, body{
 
 .nav-link {
     text-decoration: none;
-    font-size: 2.3vh;
+    font-size: 2.1vh;
     color: #8860D0;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 
 .nav-link:hover {
     cursor: pointer;
     border-bottom: 2px solid black;
+}
+
+
+/*   Nav Elem Container       */
+
+.nav-elem-container {
+    background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%);
+    margin-top: 90px;
+    height: 70px;
+    min-width: 100%;
+
+}
+
+.nav-elem-bar {
+    display: flex;
+    list-style: none;
+
+}
+
+
+/*  Search bar  */
+.search {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+.searchTerm {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    outline: none;
+    margin-top: 25px;
+}
+
+.searchButton {
+    outline: none;
+    margin-top: 25px;
+
 }
 
 .ham-menu {
@@ -69,7 +115,7 @@ html, body{
 .fa {
     color: purple;
     cursor: pointer;
-    font-size: 3vh;
+    font-size: 30px;
 }
 
 .fa-shopping-cart {
@@ -80,6 +126,8 @@ html, body{
 
 /* Side Menu */
 #main-side {
+    z-index: 200;
+    display: none;
     background: linear-gradient(rgb(245, 241, 243), rgb(204, 202, 202), rgb(245, 241, 243));
     height: 100%;
     position: fixed;
@@ -120,19 +168,40 @@ html, body{
 /*       Side Menu      */
 .top-side {
     border-top-left-radius: 20px;
-    background-color: silver;
+    background: linear-gradient(#c26afc, #ba74e8, #b261e8, #ba74e8, #c26afc);
     width: 100%;
-    height: 12%;
+    height: 22%;
+    display: flex;
+}
+.profile-container{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-content {
+    min-width: 100%;
+    text-align: center;
+}
+
+.profile-pic {
+    object-fit: cover;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    width: 100%;
+
 }
 
 .account-info {
-    height: 100%;
-    width: 30%;
+
     text-align: center;
     list-style: none;
-    font-size: 30px;
-    border-radius: 50%;
-
-    margin: 0 auto;
+    font-size: 18px;
+    color: #e0dce3;
 
 }
