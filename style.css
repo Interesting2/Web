@@ -16,7 +16,7 @@ html, body{
     box-sizing: border-box;
 }
 .view-port{
-
+    min-width: 800px;
 }
 
 /*                Navigation Bar                */
@@ -27,7 +27,8 @@ html, body{
     min-height: 90px;
     top: 0;
     left: 0;
-    right: 0;
+
+
 }
 
 
@@ -117,7 +118,7 @@ html, body{
 
 .searchTerm:hover {
     transition: width 1s ease;
-    width: 1450px;
+    width: 1200px;
 }
 
 .searchButton {
@@ -217,11 +218,26 @@ html, body{
 
 
 /* Response Screen */
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1500px) {
     .nav-link {
         display: none;
     }
 }
+
+@media only screen and (max-width: 640px) {
+    .search {
+        width: 400px;
+        transition: width ease 0.6s;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .search {
+        width: 300px;
+        transition: width ease 0.6s;
+    }
+}
+
 
 /* Side Menu Animation */
 
