@@ -31,13 +31,44 @@ html, body{
 }
 
 
-
 .nav-bar {
     list-style: none;
     display: flex;
     font-size: 2.5vh;
+}
+
+
+.nav-logo {
+    min-height: 100%;
+    width: 10%;
+    margin-top: 30px;
+}
+
+.nav-logo:nth-child(3) {
+    text-align: right;
+    padding-right: 15px;
+}
+
+
+
+
+/*   Nav Elem Container       */
+
+.nav-elem-container {
+    background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%);
+    margin-top: 85px;
+    height: 70px;
+    min-width: 100%;
 
 }
+
+.nav-elem-bar {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .nav-elem {
     /*width: var(--s-gap);*/
@@ -46,15 +77,10 @@ html, body{
     margin-top: 30px;
 }
 
-.nav-elem:nth-child(3) {
-    text-align: right;
-    padding-right: 35px;
-}
-
 
 .nav-link {
     text-decoration: none;
-    font-size: 2.1vh;
+    font-size: 17px;
     color: #8860D0;
     min-height: 100%;
     min-width: 100%;
@@ -67,21 +93,6 @@ html, body{
 }
 
 
-/*   Nav Elem Container       */
-
-.nav-elem-container {
-    background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%);
-    margin-top: 90px;
-    height: 70px;
-    min-width: 100%;
-
-}
-
-.nav-elem-bar {
-    display: flex;
-    list-style: none;
-
-}
 
 
 /*  Search bar  */
@@ -89,22 +100,37 @@ html, body{
   width: 100%;
   height: 100%;
   display: flex;
-
+  justify-content: center;
 }
 
 .searchTerm {
-    width: 100%;
+    width: 600px;
     height: 45px;
-    font-size: 20px;
+    font-size: 18px;
     outline: none;
     margin-top: 25px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid white;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.searchTerm:hover {
+    transition: width 1s ease;
+    width: 1450px;
 }
 
 .searchButton {
     outline: none;
     margin-top: 25px;
-
+    border-radius: 0 10px 10px 0;
+    border: 1px solid white;
+    background-color: white;
 }
+
+
+
+/*          logo        */
 
 .ham-menu {
     width: 100%;
@@ -119,10 +145,11 @@ html, body{
 }
 
 .fa-shopping-cart {
-
     width: 50%;
     text-align: center;
 }
+
+
 
 /* Side Menu */
 #main-side {
@@ -143,36 +170,19 @@ html, body{
 
 .cross-menu {
     color: rgb(57, 53, 53);
-    font-size: 5vh;
+    font-size: 40px;
     cursor: pointer;
 }
 
-
-/* Response Screen */
-@media only screen and (max-width: 1400px) {
-    .nav-link {
-        display: none;
-    }
-    .ham-menu {
-        display: block;
-    }
-}
-
-/* Side Menu Animation */
-
-@keyframes cool-effect {
-
-}
-
-
-/*       Side Menu      */
 .top-side {
     border-top-left-radius: 20px;
     background: linear-gradient(#c26afc, #ba74e8, #b261e8, #ba74e8, #c26afc);
     width: 100%;
-    height: 22%;
+    height: 200px;
     display: flex;
+
 }
+
 .profile-container{
     min-height: 100%;
     min-width: 100%;
@@ -203,5 +213,18 @@ html, body{
     list-style: none;
     font-size: 18px;
     color: #e0dce3;
+}
+
+
+/* Response Screen */
+@media only screen and (max-width: 1400px) {
+    .nav-link {
+        display: none;
+    }
+}
+
+/* Side Menu Animation */
+
+@keyframes cool-effect {
 
 }
