@@ -9,14 +9,29 @@
 html, body{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 7.5rem;
+    scroll-behavior: smooth;
 }
+
+html::webkit-scrollbar-track {
+    background: var(--w-white);
+}
+
+html::webkit-scrollbar-thumb {
+    background: var(--w-white);
+    border-radius: 5rem;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 .view-port{
-    min-width: 800px;
+    width: 100%;
 }
 
 /*                Navigation Bar                */
@@ -28,26 +43,25 @@ html, body{
     top: 0;
     left: 0;
 
-
 }
 
 
 .nav-bar {
     list-style: none;
     display: flex;
-    font-size: 2.5vh;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 .nav-logo {
+    margin: 0 10px;
     min-height: 100%;
-    width: 10%;
     margin-top: 30px;
 }
 
 .nav-logo:nth-child(3) {
     text-align: right;
-    padding-right: 15px;
 }
 
 
@@ -60,6 +74,7 @@ html, body{
     margin-top: 85px;
     height: 70px;
     min-width: 100%;
+    position: fixed;
 
 }
 
@@ -98,15 +113,13 @@ html, body{
 
 /*  Search bar  */
 .search {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 75px;
 }
 
 .searchTerm {
-    width: 600px;
-    height: 45px;
     font-size: 18px;
     outline: none;
     margin-top: 25px;
@@ -114,11 +127,12 @@ html, body{
     border: 1px solid white;
     letter-spacing: 1.5px;
     text-align: center;
+    width: 40%;
 }
 
 .searchTerm:hover {
-    transition: width 1s ease;
-    width: 1200px;
+    transition: width 1s ease-in-out;
+    width: 80%;
 }
 
 .searchButton {
@@ -138,35 +152,72 @@ html, body{
     text-align: center;
 }
 
+.fa-bars:hover {
+    transform: rotate(360deg);
+}
+
 /* Style Icon  */
 .fa {
     color: purple;
     cursor: pointer;
     font-size: 30px;
-}
-
-.fa-shopping-cart {
-    width: 50%;
+    width: 100%;
     text-align: center;
+    transition: transform .7s ease-in-out;
 }
-
 
 
 /* Side Menu */
 #main-side {
     z-index: 200;
-    display: none;
     background: linear-gradient(rgb(245, 241, 243), rgb(204, 202, 202), rgb(245, 241, 243));
     height: 100%;
     position: fixed;
     right: 0;
     top: 0;
-    width: 0;
     animation-name: cool-effect;
     animation-duration: 5s;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    transition: transform .7s ease-in-out;
+    transform: translateX(500px);
+    overflow: hidden;
 }
+
+#side-content-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#side-sub-content-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    transform: translateX(-500px);
+}
+
+#main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#main-menu:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.back {
+    align-items: left;
+    width: 100%;
+    font-weight: bold;
+
+}
+
 
 
 .cross-menu {
@@ -216,31 +267,54 @@ html, body{
     color: #e0dce3;
 }
 
+.side-content-header {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.side-content {
+    padding: 10px;
+}
+.side-content:hover {
+    background-color: lightcyan;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.side-new-content {
+    display: flex;
+    justify-content: space-between;
+}
+.side-new-content:hover {
+    background-color: lightcyan;
+}
+
+.side-link {
+    width: 100%;
+    padding: 10px;
+}
+
+.fa-hand-o-right {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+.fa-hand-o-left {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 60%;
+
+}
+
 
 /* Response Screen */
 @media only screen and (max-width: 1500px) {
     .nav-link {
         display: none;
     }
-}
-
-@media only screen and (max-width: 640px) {
-    .search {
-        width: 400px;
-        transition: width ease 0.6s;
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    .search {
-        width: 300px;
-        transition: width ease 0.6s;
-    }
-}
-
-
-/* Side Menu Animation */
-
-@keyframes cool-effect {
-
 }
