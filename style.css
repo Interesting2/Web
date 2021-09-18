@@ -12,6 +12,7 @@ html, body{
     overflow-x: hidden;
     scroll-padding-top: 7.5rem;
     scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 html::webkit-scrollbar-track {
@@ -308,7 +309,76 @@ hr {
     margin: 0;
     text-align: left;
     width: 60%;
+}
 
+
+/* Main Content */
+
+.home-container {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 155px;
+    background: lavenderblush;    
+}
+
+.slideshow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+.left-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.left-arrow .fa-hand-o-left {
+    
+}
+
+.right-arrow {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.right-arrow .fa-hand-o-right {
+}
+
+.home-content {
+    flex-basis: 30%;
+    min-width: 200px;
+}
+
+.home-content h1{
+    font-size: 50px;
+}
+
+.home-content p {
+    font-size: 20px;
+}
+
+.slides {
+    max-width: 100%;
+}
+
+.offer-btn {
+    display: inline-block;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 15px 0;
+    font-size: 15px;
+    z-index: 1;
+}
+
+.offer-btn:hover {
+    background-color: cyan;
+    transition: background-color 0.7s ease
 }
 
 
