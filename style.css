@@ -129,10 +129,10 @@ html::webkit-scrollbar-thumb {
     letter-spacing: 1.5px;
     text-align: center;
     width: 40%;
+    transition: width 1s ease-in-out;
 }
 
 .searchTerm:hover {
-    transition: width 1s ease-in-out;
     width: 80%;
 }
 
@@ -181,7 +181,7 @@ html::webkit-scrollbar-thumb {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 500px; 
     transition: transform .7s ease-in-out;
     transform: translateX(500px);
     overflow: hidden;
@@ -317,9 +317,8 @@ hr {
 .home-container {
     width: 100%;
     display: flex;
-    position: absolute;
-    top: 155px;
-    background: lavenderblush;    
+    margin-top: 155px;
+    background: lavenderblush; 
 }
 
 .slideshow {
@@ -351,7 +350,7 @@ hr {
 
 .home-content {
     flex-basis: 30%;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .home-content h1{
@@ -381,6 +380,41 @@ hr {
     transition: background-color 0.7s ease
 }
 
+/* Category */
+
+.category-container {
+    margin: 100px 0;
+}
+
+.category-content {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: linear-gradient( rgb(255, 255, 255), rgb(241, 214, 233));
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 300px;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    min-width: 200px;
+    
+}
+
+.col-4 img {
+    width: 100%;
+}
 
 /* Response Screen */
 @media only screen and (max-width: 1500px) {
