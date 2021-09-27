@@ -38,12 +38,12 @@ html::webkit-scrollbar-thumb {
 /*                Navigation Bar                */
 .nav-container {
     min-width: var(--full-width);
-    background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%);
+    /* background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%); */
+
     position: fixed;
     min-height: 90px;
     top: 0;
     left: 0;
-
 }
 
 
@@ -71,7 +71,8 @@ html::webkit-scrollbar-thumb {
 /*   Nav Elem Container       */
 
 .nav-elem-container {
-    background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%);
+    /* background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%); */
+
     margin-top: 85px;
     height: 70px;
     min-width: 100%;
@@ -106,7 +107,8 @@ html::webkit-scrollbar-thumb {
 
 .nav-link:hover {
     cursor: pointer;
-    border-bottom: 2px solid black;
+    color: black;
+    transition: color 0.5s ease-in;
 }
 
 
@@ -125,7 +127,7 @@ html::webkit-scrollbar-thumb {
     outline: none;
     margin-top: 25px;
     border-radius: 10px 0 0 10px;
-    border: 1px solid white;
+    border: 1px solid grey;
     letter-spacing: 1.5px;
     text-align: center;
     width: 40%;
@@ -140,7 +142,7 @@ html::webkit-scrollbar-thumb {
     outline: none;
     margin-top: 25px;
     border-radius: 0 10px 10px 0;
-    border: 1px solid white;
+    border: 1px solid grey;
     background-color: white;
 }
 
@@ -181,7 +183,7 @@ html::webkit-scrollbar-thumb {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 10px;
     width: 90%;
-    max-width: 500px; 
+    max-width: 500px;
     transition: transform .7s ease-in-out;
     transform: translateX(500px);
     overflow: hidden;
@@ -318,7 +320,7 @@ hr {
     width: 100%;
     display: flex;
     margin-top: 155px;
-    background: lavenderblush; 
+    /* background: lavenderblush; */
 }
 
 .slideshow {
@@ -336,7 +338,7 @@ hr {
 }
 
 .left-arrow .fa-hand-o-left {
-    
+
 }
 
 .right-arrow {
@@ -383,41 +385,132 @@ hr {
 /* Category */
 
 .category-container {
-    margin: 100px 0;
+    margin: 100px 50px;
+    /* background: lightyellow; */
 }
+
+.shop-container {
+    margin: 200px 50px;
+    /* background: lightyellow; */
+    text-align: center;
+}
+
 
 .category-content {
     max-width: 1500px;
     margin: 0 auto;
-    background: linear-gradient( rgb(255, 255, 255), rgb(241, 214, 233));
+    /*background: linear-gradient( rgb(255, 255, 255), rgb(241, 214, 233)); */
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .col-3 {
     flex-basis: 30%;
     min-width: 300px;
+    margin: 10px 10px;
+    /* background: linear-gradient(lightgrey, white, lightgrey); */
 }
 
 .col-3 img {
-    width: 100%;
+    width: 80%;
 }
 
 .col-4 {
     flex-basis: 25%;
-    min-width: 200px;
-    
+    min-width: 250px;
+
 }
 
 .col-4 img {
+    width: 70%;
+}
+
+.col-6 {
+    flex-basis: 30%;
+    min-width: 200px;
+}
+
+.col-6 img {
+    width: 70%;
+}
+
+/*  Footer  */
+
+.footer-search {
+    text-align: center;
+    margin-bottom: 20px;
+
+
+}
+
+.footer-button {
+    text-align: center;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-button button {
+    flex-basis: 15%;
+    padding: 20px 0;
+    margin: 10px 30px;
+    min-width: 100px;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+}
+
+.footer-container {
+    background-color: lightgrey;
+    padding: 30px 0 0 0;
+}
+
+.footer-searchTerm {
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+
+}
+
+.footer-content {
+    justify-content: center;
     width: 100%;
 }
 
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3 {
+    min-width: 140px;
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.footer-col-1 ul, .footer-col-2 ul, .footer-col-3 ul {
+    margin: 30px 0;
+}
+
+.footer-col-1 ul li, .footer-col-2 ul li, .footer-col-3 ul li{
+    list-style: none;
+    padding: 0 0 20px 0;
+}
+
 /* Response Screen */
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1300px) {
     .nav-link {
         display: none;
     }
