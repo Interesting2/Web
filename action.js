@@ -11,9 +11,9 @@ function closeMenu() {
     sideMenu.style.cssText += 'transform: translateX(500px);';
     viewPort[0].style.marginRight = "0";
     viewWindow[0].style.cssText = '';
-    
+
     let subContainer = document.getElementById('side-sub-content-container');
-    let mainContainer = document.getElementById('side-content-container'); 
+    let mainContainer = document.getElementById('side-content-container');
     subContainer.style.cssText += 'transform: translateX(-500px);';
     mainContainer.style.cssText += 'transform: translateX(0)';
     subContentContainer.innerHTML = "";
@@ -32,16 +32,16 @@ function openMenu() {
 document.querySelectorAll('.side-new-content').forEach(row => {
         row.addEventListener('click', () => {
             let subContainer = document.getElementById('side-sub-content-container');
-            let mainContainer = document.getElementById('side-content-container'); 
+            let mainContainer = document.getElementById('side-content-container');
             subContainer.style.cssText += 'transform: translateX(0);';
             mainContainer.style.cssText += 'transform: translateX(500px)';
-        });    
+        });
 });
 
 document.getElementById('main-menu').addEventListener('click', () => {
 
     let subContainer = document.getElementById('side-sub-content-container');
-    let mainContainer = document.getElementById('side-content-container'); 
+    let mainContainer = document.getElementById('side-content-container');
     subContainer.style.cssText += 'transform: translateX(-500px);';
     mainContainer.style.cssText += 'transform: translateX(0)';
     subContentContainer.innerHTML = "";
@@ -55,19 +55,19 @@ function openNewProduct1() {
                                     <a href="#"> \
                                     <div class="side-new-content">\
                                         <div class="side-link">Cat 1</div>\
-                                        <i class="fa fa-hand-o-right"></i>\
+                                        <i class=""></i>\
                                     </div>\
                                     </a>\
                                     <a href="#">\
                                     <div class="side-new-content">\
                                         <div class="side-link">Cat 2</div>\
-                                        <i class="fa fa-hand-o-right"></i>\
+                                        <i class="></i>\
                                     </div>\
                                     </a>\
                                     <a href="#">\
                                     <div class="side-new-content">\
                                         <div class="side-link">Cat 3</div>\
-                                        <i class="fa fa-hand-o-right"></i>\
+                                        <i class=""></i>\
                                     </div>\
                                     </a>\
                                     <hr>'
