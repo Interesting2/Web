@@ -52,23 +52,40 @@ document.getElementById('main-menu').addEventListener('click', () => {
 
 function openNewProduct1() {
     subContentContainer.innerHTML = '<div class="side-content-header">Beauty & Skincare</div>\
-                                    <a href="#"> \
+                                    <a href="#">\
                                     <div class="side-new-content">\
                                         <div class="side-link">Cat 1</div>\
                                         <i class=""></i>\
                                     </div>\
                                     </a>\
-                                    <a href="#">\
+                                    <a href="#"> \
                                     <div class="side-new-content">\
                                         <div class="side-link">Cat 2</div>\
-                                        <i class="></i>\
+                                        <i class=""></i>\
                                     </div>\
                                     </a>\
                                     <a href="#">\
                                     <div class="side-new-content">\
                                         <div class="side-link">Cat 3</div>\
-                                        <i class=""></i>\
+                                        <i class="></i>\
                                     </div>\
-                                    </a>\
-                                    <hr>'
+                                    </a>'
 }
+
+/* Swiper JS */
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
