@@ -7,8 +7,18 @@ body {
   color: #000;
 }
 
-.swiper {   
-    width: 1000px;
+.mySwiper1 {   
+    width: 100%;
+    margin-top: 100px;
+
+}
+
+.mySwiper2 { 
+  width: 1600px;
+}
+
+.mySwiper3 { 
+  width: 350px;
 }
 
 .swiper-slide {
@@ -35,6 +45,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background:
-}
-*/
+}*/
+
+

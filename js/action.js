@@ -73,19 +73,470 @@ function openNewProduct1() {
 }
 
 /* Swiper JS */
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+var homeSwiper = new Swiper(".mySwiper1", {
     spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      el: ".swiper-pagination1",
+      clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next1",
+      prevEl: ".swiper-button-prev1",
     },
 });
+
+
+
+function changeSwiper(x) {
+    if (x.matches) {
+        console.log("here1");
+        document.getElementById("swiper_change").className = "swiper mySwiper3";
+
+        let swiper3 = new Swiper(".mySwiper3", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination3",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next3",
+                prevEl: ".swiper-button-prev3",
+            },
+        });
+
+    } else {
+        console.log("here2");
+        document.getElementById("swiper_change").className = "swiper mySwiper2";
+        let swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            slidesPerGroup: 5,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination2",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next2",
+                prevEl: ".swiper-button-prev2",
+            },
+        });
+
+    }
+}
+var changeSlide = window.matchMedia("(max-width: 700px)");
+changeSwiper(changeSlide) // Call listener function at run time
+changeSlide.addListener(changeSwiper) // Attach listener function on state changes
+
+
+
+
+
+/*
+
+var tmpHomeSwiper = new Swiper(".mySwiper3", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination3",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next3",
+      prevEl: ".swiper-button-prev3",
+    },
+});
+
+/* Media Query  
+
+function changeSwiper(x) {
+    let swipeSmall = document.getElementsByClassName('mySwiper2')[0]; 
+    let swipeContainer = document.getElementById('swiper-container');
+    if (x.matches) { // If media query matches
+        swipeSmall.style.cssText += 'display: none';
+        swipeContainer.innerHTML += '<div class="swiper mySwiper3">\
+        <div class="swiper-wrapper">\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        </div>\
+        <div class="swiper-button-next swiper-button-next3"></div>\
+        <div class="swiper-button-prev swiper-button-prev3"></div>\
+        <div class="swiper-pagination swiper-pagination3"></div>\
+    </div>';
+        
+        
+        console.log(swipeContainer);
+       
+        
+        
+    } else {
+        console.log("here");
+        swipeSmall.style.cssText -= 'display: none';
+        swipeContainer.innerHTML -= '<div class="swiper mySwiper3">\
+        <div class="swiper-wrapper">\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        <div class="swiper-slide">\
+            <div class="slider-box">\
+                <div class="product-container">\
+                    <img src="./adidas_shoes.png" class="" alt="adidas_shoes">\
+                </div>\
+                <div class="product-details">\
+                    <p class="product-name">FooBar123</p>\
+                    <a href="" class="product-price">Price: $50</a>\
+                </div>\
+                <div class="product-function-container">\
+                    <div class="product-function">\
+                        <button>Preview Product</button>\
+                    </div>\
+                    <div class="product-function">\
+                        <button>Add to Cart</button>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+        </div>\
+        <div class="swiper-button-next swiper-button-next3"></div>\
+        <div class="swiper-button-prev swiper-button-prev3"></div>\
+        <div class="swiper-pagination swiper-pagination3"></div>\
+    </div>';
+    }
+  }
+
+var changeSlide = window.matchMedia("(max-width: 700px)");
+//changeSwiper(changeSlide) // Call listener function at run time
+changeSlide.addListener(changeSwiper) // Attach listener function on state changes
+*/
