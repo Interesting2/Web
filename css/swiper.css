@@ -13,12 +13,13 @@ body {
 
 }
 
-.mySwiper2 { 
+.mySwiper3 { 
   width: 1600px;
 }
 
-.mySwiper3 { 
-  width: 350px;
+.mySwiper2 { 
+  width: 60%;
+  min-width: 800px;
 }
 
 .swiper-slide {

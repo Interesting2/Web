@@ -90,8 +90,23 @@ var homeSwiper = new Swiper(".mySwiper1", {
     },
 });
 
+let swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next2",
+        prevEl: ".swiper-button-prev2",
+    },
+});
 
-
+/*
 function changeSwiper(x) {
     if (x.matches) {
         console.log("here1");
