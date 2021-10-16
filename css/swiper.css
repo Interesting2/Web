@@ -14,17 +14,17 @@ body {
 }
 
 .mySwiper3 { 
-  width: 1600px;
+  max-width: 80%;
+  min-width: 200px;
+  display: none;
 }
 
 .mySwiper2 { 
-  width: 60%;
-  min-width: 800px;
+  width: 100%;
 }
 
 .swiper-slide {
   text-align: center;
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,3 +49,11 @@ body {
 }*/
 
 
+@media only screen and (max-width: 750px) {
+  .mySwiper3 {
+    display: block;
+  }
+  .mySwiper2 {
+    display: none;
+  }
+}
