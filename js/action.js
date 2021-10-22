@@ -36,6 +36,67 @@ function openMenu() {
     //console.log(viewWindow[0]);
 }
 
+// listen for the col-3 images
+document.querySelectorAll('.director1').forEach(director => {
+    director.addEventListener('mouseover', () => {
+        let icons = document.getElementsByClassName('director-actions1')[0];
+        let photo = document.getElementsByClassName('p1')[0]; 
+        photo.style.cssText += 'opacity: 0.3';  
+        icons.style.cssText -= 'display:none';
+        icons.style.cssText += 'display:block';
+    })
+})
+
+document.querySelectorAll('.director1').forEach(director => {
+    director.addEventListener('mouseout', () => {
+        let icons = document.getElementsByClassName('director-actions1')[0];
+        let photo = document.getElementsByClassName('p1')[0]; 
+        photo.style.cssText -= 'opacity: 0.3';
+        icons.style.cssText += 'display:none';
+        icons.style.cssText -= 'display:block';
+    })
+})
+
+document.querySelectorAll('.director2').forEach(director => {
+    director.addEventListener('mouseover', () => {
+        let icons = document.getElementsByClassName('director-actions2')[0];
+        let photo = document.getElementsByClassName('p2')[0]; 
+        photo.style.cssText += 'opacity: 0.3';  
+        icons.style.cssText -= 'display:none';
+        icons.style.cssText += 'display:block';
+    })
+})
+
+document.querySelectorAll('.director2').forEach(director => {
+    director.addEventListener('mouseout', () => {
+        let icons = document.getElementsByClassName('director-actions2')[0];
+        let photo = document.getElementsByClassName('p2')[0]; 
+        photo.style.cssText -= 'opacity: 0.3';  
+        icons.style.cssText += 'display:none';
+        icons.style.cssText -= 'display:block';
+    })
+})
+
+document.querySelectorAll('.director3').forEach(director => {
+    director.addEventListener('mouseover', () => {
+        let icons = document.getElementsByClassName('director-actions3')[0];
+        let photo = document.getElementsByClassName('p3')[0]; 
+        photo.style.cssText += 'opacity: 0.3';  
+        icons.style.cssText -= 'display:none';
+        icons.style.cssText += 'display:block';
+    })
+})
+
+document.querySelectorAll('.director3').forEach(director => {
+    director.addEventListener('mouseout', () => {
+        let icons = document.getElementsByClassName('director-actions3')[0];
+        let photo = document.getElementsByClassName('p3')[0]; 
+        photo.style.cssText -= 'opacity: 0.3';  
+        icons.style.cssText += 'display:none';
+        icons.style.cssText -= 'display:block';
+    })
+})
+
 // Show side-sub-content-container
 document.querySelectorAll('.side-new-content').forEach(row => {
         row.addEventListener('click', () => {

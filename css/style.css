@@ -307,19 +307,6 @@ hr {
     width: 100%;
 }
 
-.left-arrow {
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-}
-
-
-.right-arrow {
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-}
-
 .home-content {
     flex-basis: 30%;
     min-width: 180px;
@@ -374,8 +361,7 @@ hr {
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    padding-left: 90px;
 }
 
 .category-container h2 {
@@ -384,15 +370,45 @@ hr {
 }
 
 .col-3 {
-    flex-basis: 30%;
-    margin: 10px 10px;
+    flex-basis: 33%;
+    position: relative;
+    margin: 10px 0px;
     /* background: linear-gradient(lightgrey, white, lightgrey); */
 }
 
-.col-3 img {
-    width: 65%;
-    min-width: 200px;
+.p1, .p2, .p3 {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+    z-index: -1;
 }
+
+.director1, .director2, .director3 {
+    width: 70%;  
+    z-index: 100;  
+    position: relative;   
+}
+
+.director1:hover, .director2:hover, .director3:hover {
+    background-color: rgb(249, 239, 239);
+}
+
+.director-actions{
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    display: none;
+}
+
+
+.director-actions i{
+    font-size: 25px;
+    padding: 15px 15px;
+    display: inline;
+}
+
 
 .col-4 {
     flex-basis: 25%;
@@ -614,11 +630,8 @@ hr {
     .col-3 {
         flex-basis: 100%;
     }
-    .col-3 img {
-        width: 30%;
-    }
-
 }
+
 @media only screen and (max-width: 945px) {
     .col-6 {
         flex-basis: 50%;
