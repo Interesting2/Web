@@ -403,6 +403,10 @@ hr {
     min-width: 200px;
 }
 
+.col-4 img:hover {
+    transform: scale(1.1);
+}
+
 .col-4 h4 {
     font-size: 20px;
 }
@@ -419,6 +423,10 @@ hr {
 .col-6 img {
     width: 70%;
     min-width: 200px;
+}
+
+.col-6 img:hover {
+    transform: scale(1.1);
 }
 
 /* Product Slider */
