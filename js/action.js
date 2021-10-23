@@ -1,4 +1,4 @@
-
+/* Actions */
 let sideMenu = document.getElementById('main-side');
 let viewPort = document.getElementsByTagName('body');
 let navWindow = document.getElementsByClassName('nav-window');
