@@ -361,7 +361,6 @@ hr {
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 90px;
 }
 
 .category-container h2 {
@@ -372,15 +371,16 @@ hr {
 .col-3 {
     flex-basis: 33%;
     position: relative;
-    margin: 10px 0px;
+    background-color: red;
     /* background: linear-gradient(lightgrey, white, lightgrey); */
 }
 
-.p1, .p2, .p3 {
+.director img {
     max-width: 100%;
     max-height: 100%;
     display: block; /* remove extra space below image */
     z-index: -1;
+    min-width: 250px;
 }
 
 .director1, .director2, .director3 {
@@ -626,10 +626,15 @@ hr {
         width: 50%;
     }
 }
-@media only screen and (max-width: 911px) {
+@media only screen and (max-width: 1099px) {
     .col-3 {
         flex-basis: 100%;
+        background: red;
     }
+    .director img {
+        width: 50%;
+    }
+
 }
 
 @media only screen and (max-width: 945px) {
