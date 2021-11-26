@@ -31,6 +31,8 @@ html, body{
     min-height: 90px;
     top: 0;
     left: 0;
+    background: rgb(173, 209, 230);
+    z-index: 80;
 }
 
 .nav-bar {
@@ -103,9 +105,12 @@ html, body{
     /* background: linear-gradient(rgb(245, 241, 243) 99%, rgb(53, 51, 53) 1%); */
     height: 70px;
     min-width: 100%;
-    position: fixed;
+    position: absolute;
     top: 90px;
     z-index: 100;
+    background: rgb(173, 209, 230);
+    z-index: 80;
+    border-radius: 0 0 15px 15px;
 }
 
 .nav-elem-bar {
@@ -392,6 +397,11 @@ hr {
 .col-3 img {
     width: 65%;
     min-width: 200px;
+    padding-bottom: 50px;
+}
+
+.col-3 img:hover {
+    transform: scale(1.1);
 }
 
 .col-4 {
@@ -429,7 +439,42 @@ hr {
     transform: scale(1.1);
 }
 
+/* Product Item Container */
+.product-item-container {
+    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+    /* , , , #5680E9;#84CEEB;#5AB9EA;#C1C8E4;*/
+    width: 350px;
+    border-radius: 30px;
+    margin: 50px auto;
+    height: 450px;
+}
+
+.product-name {
+    font-size: 20px;
+    padding-bottom: 10px;   
+}
+
+.product-price {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.product-item-container img {
+    object-fit: cover;
+}
+
+.preview-btn {
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    
+}
+
 /* Product Slider */
+
+.swiper-container {
+    margin-bottom: 100px;
+}
 
 .slider-box {
 }
@@ -473,6 +518,7 @@ hr {
     border: none;
     cursor: pointer;
 }
+
 
 
 
@@ -610,7 +656,7 @@ hr {
 }
 
 /* Col div responsive */
-@media only screen and (max-width: 1116px) {
+@media only screen and (max-width: 1716px) {
     .col-4 {
         flex-basis: 50%;
     }
@@ -619,12 +665,7 @@ hr {
     }
 }
 @media only screen and (max-width: 911px) {
-    .col-3 {
-        flex-basis: 100%;
-    }
-    .col-3 img {
-        width: 30%;
-    }
+    
 
 }
 @media only screen and (max-width: 945px) {
