@@ -109,7 +109,7 @@ html, body{
     top: 90px;
     z-index: 100;
     background: rgb(173, 209, 230);
-    z-index: 80;
+    z-index: 79;
     border-radius: 0 0 15px 15px;
 }
 
@@ -463,6 +463,11 @@ hr {
     object-fit: cover;
 }
 
+.product-content {
+    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+    margin-top: 50px;
+}
+
 .preview-btn {
     border-radius: 10px;
     font-size: 18px;
@@ -477,6 +482,14 @@ hr {
 }
 
 .slider-box {
+    /* background-color: #ba74e8; */
+    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+    border-radius: 30px;
+}
+
+.swiper-wrapper {
+    margin-bottom: 50px !important;
+
 }
 
 .product-container {
@@ -502,7 +515,7 @@ hr {
 .product-function-container {
     display: flex;
     width: 100%;
-    padding-bottom: 30px;
+    padding: 30px 0;
 }
 
 .product-function {
@@ -517,6 +530,12 @@ hr {
     outline: none;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+.product-function button:hover {
+    background-color: #5ab9ea;
+    transition: background-color 0.7s ease;
 }
 
 
@@ -649,14 +668,18 @@ hr {
 }
 
 /* Swiper Responsive */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 950px) {
     .product-container img{
         width: 75%;   
+    }
+
+    #swiper_change {
+        max-width: 350px;
     }
 }
 
 /* Col div responsive */
-@media only screen and (max-width: 1716px) {
+@media only screen and (max-width: 1516px) {
     .col-4 {
         flex-basis: 50%;
     }

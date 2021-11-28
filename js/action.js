@@ -103,7 +103,7 @@ var homeSwiper = new Swiper(".mySwiper1", {
 
 let swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: 5,
-    spaceBetween: 30,
+    spaceBetween: 20,
     slidesPerGroup: 5,
     loop: true,
     loopFillGroupWithBlank: true,
