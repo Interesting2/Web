@@ -6,6 +6,31 @@ let viewWindow = document.getElementsByClassName('view-port');
 let navContainer = document.getElementsByClassName('nav-container');
 let subContentContainer = document.getElementById('side-sub-target');
 
+// Miscellaneous
+let overlay_images = document.getElementsByClassName('overlay-image');
+let overlay_icons = document.getElementsByClassName('overlay-icons');
+let overlay = document.getElementsByClassName("overlay");
+let quantity = document.getElementsByClassName("quantity");
+let overlay_cart = document.getElementsByClassName("overlay-cart");
+let plus_square = document.getElementsByClassName("plus-square");
+let minus_square = document.getElementsByClassName("minus-square");
+let product_counter = document.getElementsByClassName("product-counter");
+
+// Best sellers
+let best_overlay_images = document.getElementsByClassName('best-overlay-image');
+let best_overlay_icons = document.getElementsByClassName('best-overlay-icons');
+let best_overlay = document.getElementsByClassName("best-overlay");
+let best_quantity = document.getElementsByClassName("best-quantity");
+let best_overlay_cart = document.getElementsByClassName("best-overlay-cart");
+let best_plus_square = document.getElementsByClassName("best-plus-square");
+let best_minus_square = document.getElementsByClassName("best-minus-square");
+let best_product_counter = document.getElementsByClassName("best-product-counter");
+
+// featured products
+let featured_overlay = document.getElementsByClassName("featured-overlay");
+let featured_overlay_images = document.getElementsByClassName('featured-overlay-image');
+let featured_overlay_icons = document.getElementsByClassName('featured-overlay-icons');
+
 function closeMenu() {
     sideMenu.style.cssText -= 'transform: translateX(0);';
     sideMenu.style.cssText += 'transform: translateX(500px);';
@@ -57,6 +82,119 @@ document.getElementById('main-menu').addEventListener('click', () => {
     mainContainer.style.cssText -= 'transform: translateX(500px)';
     subContentContainer.innerHTML = ""; // reset all pressed behaviours
 });
+
+
+for (let i = 0; i < 6; i ++) {
+    let eachOverlay = overlay[i];
+    let eachImage = overlay_images[i];
+    let eachIcon = overlay_icons[i];
+    let eachQuantity = quantity[i];
+    let eachCart = overlay_cart[i];
+    let eachPlus = plus_square[i];
+    let eachMinus = minus_square[i];
+    let eachCounter = product_counter[i];
+
+    eachOverlay.addEventListener('mouseover', () => {
+        console.log(1);
+        eachImage.style.opacity = '0.4';
+        eachIcon.style.display = 'flex';
+        // eachQuantity.style.display = 'none';
+
+
+    });
+
+    eachOverlay.addEventListener('mouseout', () => {
+        eachImage.style.opacity = '1';
+        eachIcon.style.display = 'none';
+
+
+    });
+
+    eachCart.addEventListener('click', () => {
+        eachCart.style.display = 'none';
+        eachQuantity.style.display = 'flex';
+
+        for (let j = 0; j < 6; j ++) {
+            if (i != j) {
+                overlay_cart[j].style.display = 'flex';
+                quantity[j].style.display = 'none';
+            }
+        }
+    });
+
+    eachPlus.addEventListener('click', () => {
+        eachCounter.innerHTML = parseInt(eachCounter.innerHTML) + 1;
+    });
+
+    eachMinus.addEventListener('click', () => {
+        eachCounter.innerHTML = parseInt(eachCounter.innerHTML) - 1;
+    });
+
+
+}
+
+
+for (let i = 0; i < 4; i ++) {
+    let bestEachOverlay = best_overlay[i];
+    let bestEachImage = best_overlay_images[i];
+    let bestEachIcon = best_overlay_icons[i];
+    let bestEachQuantity = best_quantity[i];
+    let bestEachCart = best_overlay_cart[i];
+    let bestEachPlus =best_plus_square[i];
+    let bestEachMinus = best_minus_square[i]
+    let bestEachCounter = best_product_counter[i];
+
+    bestEachOverlay.addEventListener('mouseover', () => {
+        console.log(1);
+        bestEachImage.style.opacity = '0.4';
+        bestEachIcon.style.display = 'flex';
+        // eachQuantity.style.display = 'none';
+    });
+
+    bestEachOverlay.addEventListener('mouseout', () => {
+        bestEachImage.style.opacity = '1';
+        bestEachIcon.style.display = 'none';
+    });
+
+    bestEachCart.addEventListener('click', () => {
+        bestEachCart.style.display = 'none';
+        bestEachQuantity.style.display = 'flex';
+
+        for (let j = 0; j < 4; j ++) {
+            if (i != j) {
+                best_overlay_cart[j].style.display = 'flex';
+                best_quantity[j].style.display = 'none';
+            }
+        }
+    });
+
+    bestEachPlus.addEventListener('click', () => {
+        bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) + 1;
+    });
+
+    bestEachMinus.addEventListener('click', () => {
+        bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) - 1;
+    });
+
+
+}
+
+for (let i = 0; i < 4; i ++) {
+    let featuredEachOverlay = featured_overlay[i];
+    let featuredEachImage = featured_overlay_images[i];
+    let featuredEachIcon = featured_overlay_icons[i];
+
+    featuredEachOverlay.addEventListener('mouseover', () => {
+        featuredEachImage.style.opacity = '0.4';
+        featuredEachIcon.style.display = 'block';
+        // eachQuantity.style.display = 'none';
+    });
+
+    featuredEachOverlay.addEventListener('mouseout', () => {
+        featuredEachImage.style.opacity = '1';
+        featuredEachIcon.style.display = 'none';
+    });
+}
 
 
 

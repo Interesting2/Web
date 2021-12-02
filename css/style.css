@@ -31,7 +31,7 @@ html, body{
     min-height: 90px;
     top: 0;
     left: 0;
-    background: rgb(173, 209, 230);
+    /* background: rgb(173, 209, 230); */
     z-index: 80;
 }
 
@@ -94,7 +94,7 @@ html, body{
     margin-top: 20px;
     border-radius: 0 10px 10px 0;
     border: 1px solid grey;
-    background-color: white;
+    /* background-color: white; */
     padding: 0 10px;
 }
 
@@ -108,7 +108,7 @@ html, body{
     position: absolute;
     top: 90px;
     z-index: 100;
-    background: rgb(173, 209, 230);
+    /* background: rgb(173, 209, 230); */
     z-index: 79;
     border-radius: 0 0 15px 15px;
 }
@@ -142,8 +142,22 @@ html, body{
 
 
 
+/* Header tags */
+.featured-products {
 
+}
 
+.new-products {
+    text-align: center;
+}
+
+.best-sellers {
+
+}
+
+.miscellaneous {
+    margin-bottom: 50px;
+}
 
 /*          logo        */
 
@@ -201,7 +215,7 @@ html, body{
 }
 
 #main-menu:hover {
-    background: lightgrey;
+    /* background: lightgrey; */
     cursor: pointer;
 }
 .back {
@@ -268,7 +282,7 @@ html, body{
     padding: 10px;
 }
 .side-content:hover {
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
 }
 
 hr {
@@ -281,7 +295,7 @@ hr {
 }
 
 .side-new-content:hover {
-    background-color: lightcyan;    
+    /* background-color: lightcyan;     */
 }
 
 .side-link {
@@ -344,7 +358,7 @@ hr {
 
 .offer-btn {
     display: inline-block;
-    background-color: orange;
+    /* background-color: orange; */
     padding: 20px;
     border-radius: 30px;
     margin: 15px 0;
@@ -353,8 +367,8 @@ hr {
 }
 
 .offer-btn:hover {
-    background-color: cyan;
-    transition: background-color 0.7s ease
+    /* background-color: cyan; */
+    /* transition: background-color 0.7s ease */
 }
 
 /* Category */
@@ -383,10 +397,7 @@ hr {
     align-items: center;
 }
 
-.category-container h2 {
-    font-size: 30px;
-    margin-bottom: 50px;
-}
+
 
 .col-3 {
     flex-basis: 30%;
@@ -428,19 +439,131 @@ hr {
 .col-6 {
     flex-basis: 30%;
     margin-bottom: 50px;
-    background: linear-gradient(rgb(245, 241, 243), rgb(204, 202, 202), rgb(245, 241, 243));
-    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+    /* background: linear-gradient(rgb(245, 241, 243), rgb(204, 202, 202), rgb(245, 241, 243)); */
+    /* background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2); */
 }
 
-.shade {
-    width: 28%;
-    height: 25%;
+.overlay {
+    width: 75%;
+    transform: translateX(17%);
+    position: relative;
+}
+
+.best-overlay {
+    width: 100%;
+    position: relative;
+}
+
+.featured-overlay {
+    width: 100%;
+    position: relative;
+}
+
+
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.best-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.featured-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.overlay-icons {
     position: absolute;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: none;
 }
 
-.shade:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+.best-overlay-icons {
+    position: absolute;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: none; 
+}
 
+.featured-overlay-icons {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.favourite {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fa-star, .fa-star-half-o{
+    font-size: 18px;
+
+}
+
+.overlay-icons .fa-search, .fa-heart-o, .overlay-cart{
+    font-size: 20px;
+    background: rgb(245, 241, 243);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:50%;
+    /* display: none; */
+    cursor: pointer;
+}
+
+.best-overlay-cart {
+    font-size: 20px;
+    background: rgb(245, 241, 243);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:50%;
+    /* display: none; */
+    cursor: pointer;
+}
+
+.featured-overlay-cart {
+    font-size: 20px;
+    padding: 10px;
+    /* display: none; */
+    cursor: pointer;
+}
+
+.featured-overlay-image {
+    cursor: pointer;
+}
+
+.quantity {
+    display: none;
+    background: rgb(245, 241, 243);
+    justify-content: center;
+}
+
+.best-quantity {
+    display: none;
+    background: rgb(245, 241, 243);
+    justify-content: center;
+}
+
+.best-product-counter {
+    padding: 0px 20px;
+}
+
+.product-counter {
+    padding: 0px 20px;
 }
 
 .col-6 img {
@@ -453,13 +576,13 @@ hr {
 }
 
 .category-details {
-    background: red;
+    /* background: red; */
 
 }
 
 /* Product Item Container */
 .product-item-container {
-    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+    /* background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2); */
     /* , , , #5680E9;#84CEEB;#5AB9EA;#C1C8E4;*/
     width: 350px;
     border-radius: 30px;
@@ -467,14 +590,22 @@ hr {
     margin: 50px auto;
 }
 
+.product-item-details {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px auto;
+
+}
+
 .product-name {
-    font-size: 20px;
-    padding-bottom: 10px;   
+    font-size: 18px;
+    width: 100%;
 }
 
 .product-price {
-    font-size: 15px;
-    padding-bottom: 10px;
+    font-size: 18px;
+    width: 100%;
 }
 
 .product-item-container img {
@@ -482,7 +613,7 @@ hr {
 }
 
 .product-content {
-    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+
     margin-top: 50px;
 }
 
@@ -490,7 +621,7 @@ hr {
     border-radius: 10px;
     font-size: 18px;
     outline: none;
-    
+    cursor: pointer; 
 }
 
 /* Product Slider */
@@ -501,7 +632,7 @@ hr {
 
 .slider-box {
     /* background-color: #ba74e8; */
-    background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2);
+    /* background: linear-gradient(#C1C8E4, #9dd1e5, #cacfe2); */
     border-radius: 30px;
 }
 
@@ -554,8 +685,8 @@ hr {
 }
 
 .product-function button:hover {
-    background-color: #5ab9ea;
-    transition: background-color 0.7s ease;
+    /* background-color: #5ab9ea; */
+    /* transition: background-color 0.7s ease; */
 }
 
 
@@ -659,7 +790,7 @@ hr {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: orange;
+    /* background-color: orange; */
     padding-top: 12px;
     transition: all 0.3s ease-in-out;
     font-size: 25px;
