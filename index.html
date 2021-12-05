@@ -28,12 +28,17 @@
                     <i class="fa fa-user-circle-o"></i>
                 </li>
                 <li class="nav-logo">
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search mobile-search" onclick="dropDownSearch()"></i>
                 </li>
+                
+                <li class="nav-logo">
+                    <i class="fa fa-close close-search" onclick="closeDropDownSearch()"></i>
+                </li>
+
                 <div class="search">
                   <input type="text" class="searchTerm" placeholder="What item are you looking for?">
                   <button class="searchButton"><i class="fa fa-search"></i></button>
-               </div>
+                </div>
 
                 <li class="nav-logo">
                     <!--<a href="#" class="nav-link">Login</a>-->
@@ -42,13 +47,14 @@
                     </a>
                 </li>
             </ul>
+            <div class="mobile-search-container">
+                <input type="text" class="mobile-search-term" placeholder="What item are you looking for?">
+            </div>
         </div>
-
+        
         <!--Top Second Nav Bar-->
         <div class="nav-elem-container">
             <ul class="nav-elem-bar">
-                <li class="nav-elem"><a href="#" class="nav-link">Best Sellers</a></li>
-                <li class="nav-elem"><a href="#" class="nav-link">New Products</a></li>
                 <li class="nav-elem"><a href="#" class="nav-link">Health & Wellness </a></li>
                 <li class="nav-elem"><a href="#" class="nav-link">School Supplies</a></li>
                 <li class="nav-elem"><a href="#" class="nav-link">Sporting Goods</a></li>
@@ -277,45 +283,71 @@
         <!--Main Content-->
         <div class="swiper mySwiper1">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slideshow">
-                    <div class="home-content">
-                        <h1>Best Selling Shoes</h1>
-                        <p>Follow the trend in 2021</p>
-                        <a href="" class="offer-btn">Shop Now</a>
-                    </div>
-                    <div class="home-content">
-                        <img src="./adidas_shoes.png" class="slides" alt="adidas_shoes">
-                    </div>
-                </div>
-              </div>
 
-              <div class="swiper-slide">
-                <div class="slideshow">
-                    <div class="home-content">
-                        <h1>Best Selling Shoes</h1>
-                        <p>Follow the trend in 2021</p>
-                        <a href="" class="offer-btn">Shop Now</a>
-                    </div>
-                    <div class="home-content">
-                        <img src="./adidas_shoes.png" class="slides" alt="adidas_shoes">
+                <div class="swiper-slide">
+                    <div class="slideshow2">
+                        <div class="home-content2">
+    
+                            <h1>Best Selling Shoes</h1>
+                            <p>Follow the trend in 2021</p>
+                            <a href="" class="offer-btn">Shop Now</a>
+                        </div>
+                        <div class="home-content2-visuals">
+                            <img src="./adidas_shoes.png" class="home-content2-picture" alt="adidas_shoes">
+                            <img src="./adidas_shoes.png" class="home-content2-picture" alt="adidas_shoes">
+                            <img src="./adidas_shoes.png" class="home-content2-picture" alt="adidas_shoes">
+                        </div>
                     </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide">
-                <div class="slideshow">
-                    <div class="home-content">
-                        <h1>Best Selling Shoes</h1>
-                        <p>Follow the trend in 2021</p>
-                        <a href="" class="offer-btn">Shop Now</a>
-                    </div>
-                    <div class="home-content">
-                        <img src="./adidas_shoes.png" class="slides" alt="adidas_shoes">
+                <div class="swiper-slide">
+                    <div class="slideshow">
+                        <div class="home-content1">
+                            <div class="home1-description">
+                                <h1>Best Selling Shoes</h1>
+                                <p>Follow the trend in 2021</p>
+                                <a href="" class="offer-btn">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="home-content1">
+                            <img src="./adidas_shoes.png" class="slides" alt="adidas_shoes">
+                        </div>
                     </div>
                 </div>
-              </div>
-           
+
+                <div class="swiper-slide">
+                    <div class="slideshow3">
+                        <div class="home-content3-visuals">
+                            <img src="./adidas_shoes.png" class="home-content3-picture" alt="adidas_shoes">
+                            <img src="./adidas_shoes.png" class="home-content3-picture" alt="adidas_shoes">
+                            <img src="./adidas_shoes.png" class="home-content3-picture" alt="adidas_shoes">
+                            <img src="./adidas_shoes.png" class="home-content3-picture" alt="adidas_shoes">
+                        </div>
+                        <div class="home-content3">
+                            <div class="home3-description">
+                                <h1>Best Selling Shoes</h1>
+                                <p>Discover these new items in 2022.</p>
+                                <a href="" class="home3-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="slideshow">
+                        <div class="home-content1">
+                            <img src="./adidas_shoes.png" class="slides" alt="adidas_shoes">
+                        </div>
+                        <div class="home-content1">
+                            <div class="home3-description">
+                                <h1>Best Selling Shoes</h1>
+                                <p>Discover these new items in 2022.</p>
+                                <a href="" class="home3-btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
             </div>
             <div class="swiper-button-next swiper-button-next1"></div>
             <div class="swiper-button-prev swiper-button-prev1"></div>
@@ -335,6 +367,7 @@
                                 <div class="best-overlay-icons" id="overlay-icons1">
                                     <div class="favourite">
                                         <i class="fa fa-heart-o"></i>
+                                        <i class="fa fa-heart"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -364,6 +397,7 @@
                                 <div class="best-overlay-icons" id="overlay-icons1">
                                     <div class="favourite">
                                         <i class="fa fa-heart-o"></i>
+                                        <i class="fa fa-heart"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -393,6 +427,7 @@
                                 <div class="best-overlay-icons" id="overlay-icons1">
                                     <div class="favourite">
                                         <i class="fa fa-heart-o"></i>
+                                        <i class="fa fa-heart"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -421,6 +456,7 @@
                                 <div class="best-overlay-icons" id="overlay-icons1">
                                     <div class="favourite">
                                         <i class="fa fa-heart-o"></i>
+                                        <i class="fa fa-heart"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -456,6 +492,7 @@
                                 <img src="./adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
                                 <div class="featured-overlay-icons" id="overlay-icons1">
                                     <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -470,6 +507,11 @@
                                         <div class="product-price">$100</div>
                                     </div>
                                     <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                                    <div class="featured-quantity">
+                                        <i class="fa fa-minus-square featured-minus-square"></i>
+                                        <div class="featured-product-counter">1</div>
+                                        <i class="fa fa-plus-square featured-plus-square"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
@@ -480,6 +522,7 @@
                                 <img src="./adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
                                 <div class="featured-overlay-icons" id="overlay-icons1">
                                     <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -494,6 +537,11 @@
                                         <div class="product-price">$100</div>
                                     </div>
                                     <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                                    <div class="featured-quantity">
+                                        <i class="fa fa-minus-square featured-minus-square"></i>
+                                        <div class="featured-product-counter">1</div>
+                                        <i class="fa fa-plus-square featured-plus-square"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
@@ -504,6 +552,7 @@
                                 <img src="./adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
                                 <div class="featured-overlay-icons" id="overlay-icons1">
                                     <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -518,6 +567,11 @@
                                         <div class="product-price">$100</div>
                                     </div>
                                     <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                                    <div class="featured-quantity">
+                                        <i class="fa fa-minus-square featured-minus-square"></i>
+                                        <div class="featured-product-counter">1</div>
+                                        <i class="fa fa-plus-square featured-plus-square"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
@@ -528,6 +582,7 @@
                                 <img src="./adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
                                 <div class="featured-overlay-icons" id="overlay-icons1">
                                     <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-heart"></i>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -542,6 +597,11 @@
                                         <div class="product-price">$100</div>
                                     </div>
                                     <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                                    <div class="featured-quantity">
+                                        <i class="fa fa-minus-square featured-minus-square"></i>
+                                        <div class="featured-product-counter">1</div>
+                                        <i class="fa fa-plus-square featured-plus-square"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
@@ -994,6 +1054,7 @@
                             <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                                 <i class="fa fa-shopping-cart overlay-cart"></i>
                                 <div class="quantity">
                                     <i class="fa fa-minus-square minus-square"></i>
@@ -1011,6 +1072,7 @@
                             <div class="overlay-icons" id="overlay-icons1">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                                 <i class="fa fa-shopping-cart overlay-cart"></i>
                                 <div class="quantity">
                                     <i class="fa fa-minus-square minus-square"></i>
@@ -1029,6 +1091,7 @@
                             <div class="overlay-icons" id="overlay-icons1">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                                 <i class="fa fa-shopping-cart overlay-cart"></i>
                                 <div class="quantity">
                                     <i class="fa fa-minus-square minus-square"></i>
@@ -1047,6 +1110,7 @@
                             <div class="overlay-icons" id="overlay-icons1">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                                 <i class="fa fa-shopping-cart overlay-cart"></i>
                                 <div class="quantity">
                                     <i class="fa fa-minus-square minus-square"></i>
@@ -1065,6 +1129,7 @@
                             <div class="overlay-icons" id="overlay-icons1">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                                 <i class="fa fa-shopping-cart overlay-cart"></i>
                                 <div class="quantity">
                                     <i class="fa fa-minus-square minus-square"></i>
@@ -1083,6 +1148,7 @@
                             <div class="overlay-icons" id="overlay-icons1">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                                 <i class="fa fa-shopping-cart overlay-cart"></i>
                                 <div class="quantity">
                                     <i class="fa fa-minus-square minus-square"></i>
@@ -1097,6 +1163,38 @@
             </div>
         </div>
 
+        <!-- Collection Section -->
+        <div class="collection-container">
+            <div class="collection-content">
+                <div class="full-left">
+                    <div class="beauty-collection">
+                        <h2 class="beauty-header"> Beauty Collection</h2>
+                        <p class="beauty-description"> Lorem ipsum dolor sit amet, consectetur adip</p>
+                        <img src="./adidas_shoes.png" class="beauty-image" alt="adidas_shoes">
+                    </div>
+                </div>
+    
+                <div class="full-right">
+                    <div class="top-right">
+                        <div class="clothing-collection">
+                            <img src="./adidas_shoes.png" class="clothing-image" alt="adidas_shoes"> 
+                        </div>
+                    </div>
+    
+                    <div class="bottom-right">
+                        <div class="electronics-collection">   
+                        
+                        </div>
+            
+                        <div class="health-collection">   
+            
+                        </div>
+                    </div>    
+                </div>
+
+            </div>
+
+        </div>
         
 
         <!-- Footer section -->

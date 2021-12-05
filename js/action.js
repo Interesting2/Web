@@ -30,6 +30,17 @@ let best_product_counter = document.getElementsByClassName("best-product-counter
 let featured_overlay = document.getElementsByClassName("featured-overlay");
 let featured_overlay_images = document.getElementsByClassName('featured-overlay-image');
 let featured_overlay_icons = document.getElementsByClassName('featured-overlay-icons');
+let featured_quantity = document.getElementsByClassName("featured-quantity");
+let featured_overlay_cart = document.getElementsByClassName("featured-overlay-cart");
+let featured_plus_square = document.getElementsByClassName("featured-plus-square");
+let featured_minus_square = document.getElementsByClassName("featured-minus-square");
+let featured_product_counter = document.getElementsByClassName("featured-product-counter");
+
+let heart_empty = document.getElementsByClassName('fa-heart-o');
+let heart_filled = document.getElementsByClassName('fa-heart');
+
+let mobile_search_container = document.getElementsByClassName('mobile-search-container')[0];
+let close_search = document.getElementsByClassName('close-search')[0];
 
 function closeMenu() {
     sideMenu.style.cssText -= 'transform: translateX(0);';
@@ -57,7 +68,7 @@ function openMenu() {
     viewPort[0].style.cssText += 'overflow:hidden';
     sideMenu.style.cssText -= 'transform: translateX(500px);';
     sideMenu.style.cssText += 'transform: translateX(0);';
-    viewWindow[0].style.cssText = 'position:absolute;top:0;left:0;z-index: 200;background-color: rgba(0,0,0,0.5); height: 100%;width: 100%;';
+    viewWindow[0].style.cssText = 'margin: 0; padding: 0; position:fixed;top:0;left:0;z-index: 200;background-color: rgba(0,0,0,0.5); height: 100%;width: 100%;';
     //console.log(viewWindow[0]);
 }
 
@@ -82,6 +93,23 @@ document.getElementById('main-menu').addEventListener('click', () => {
     mainContainer.style.cssText -= 'transform: translateX(500px)';
     subContentContainer.innerHTML = ""; // reset all pressed behaviours
 });
+
+for (let i = 0; i < heart_empty.length; i ++) {
+    console.log(i);
+    let eachHeartEmpty = heart_empty[i];
+    let eachHeartFilled = heart_filled[i];
+
+    eachHeartEmpty.addEventListener('click', () => {
+        eachHeartFilled.style.display = 'inline-block';
+        eachHeartEmpty.style.display = 'none';
+    });
+    
+    eachHeartFilled.addEventListener('click', () => {
+        eachHeartFilled.style.display = 'none';
+        eachHeartEmpty.style.display = 'inline-block';
+    });
+
+}
 
 
 for (let i = 0; i < 6; i ++) {
@@ -127,7 +155,8 @@ for (let i = 0; i < 6; i ++) {
     });
 
     eachMinus.addEventListener('click', () => {
-        eachCounter.innerHTML = parseInt(eachCounter.innerHTML) - 1;
+        let sales = parseInt(eachCounter.innerHTML) - 1;
+        if (sales >= 0) eachCounter.innerHTML = parseInt(eachCounter.innerHTML) - 1;
     });
 
 
@@ -173,7 +202,8 @@ for (let i = 0; i < 4; i ++) {
     });
 
     bestEachMinus.addEventListener('click', () => {
-        bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) - 1;
+        let sales = parseInt(bestEachCounter.innerHTML) - 1;
+        if (sales >= 0) bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) - 1;
     });
 
 
@@ -183,6 +213,11 @@ for (let i = 0; i < 4; i ++) {
     let featuredEachOverlay = featured_overlay[i];
     let featuredEachImage = featured_overlay_images[i];
     let featuredEachIcon = featured_overlay_icons[i];
+    let featuredEachQuantity = featured_quantity[i];
+    let featuredEachCart = featured_overlay_cart[i];
+    let featuredEachPlus = featured_plus_square[i];
+    let featuredEachMinus = featured_minus_square[i]
+    let featuredEachCounter = featured_product_counter[i];
 
     featuredEachOverlay.addEventListener('mouseover', () => {
         featuredEachImage.style.opacity = '0.4';
@@ -194,10 +229,40 @@ for (let i = 0; i < 4; i ++) {
         featuredEachImage.style.opacity = '1';
         featuredEachIcon.style.display = 'none';
     });
+
+    featuredEachCart.addEventListener('click', () => {
+        featuredEachCart.style.display = 'none';
+        featuredEachQuantity.style.display = 'flex';
+
+        for (let j = 0; j < 4; j ++) {
+            if (i != j) {
+                featured_overlay_cart[j].style.display = 'flex';
+                featured_quantity[j].style.display = 'none';
+            }
+        }
+    });
+
+    featuredEachPlus.addEventListener('click', () => {
+        featuredEachCounter.innerHTML = parseInt(featuredEachCounter.innerHTML) + 1;
+    });
+
+    featuredEachMinus.addEventListener('click', () => {
+        let sales = parseInt(featuredEachCounter.innerHTML) - 1;
+        if (sales >= 0) featuredEachCounter.innerHTML = parseInt(featuredEachCounter.innerHTML) - 1;
+    });
 }
 
 
+function dropDownSearch() {
+    mobile_search_container.style.display = 'block';
+    close_search.style.display = 'block';
 
+}
+
+function closeDropDownSearch() {
+    mobile_search_container.style.display = 'none';
+    close_search.style.display = 'none';
+}
 
 function openNewProduct1() {
     subContentContainer.innerHTML = '<div class="side-content-header">Beauty & Skincare</div>\
@@ -226,7 +291,7 @@ var homeSwiper = new Swiper(".mySwiper1", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 3000,
+      delay: 100000,
       disableOnInteraction: false,
     },
     pagination: {

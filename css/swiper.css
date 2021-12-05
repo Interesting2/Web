@@ -38,6 +38,9 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  margin-top: 50px;
+  min-height: 500px;
+
 }
 
 /*
