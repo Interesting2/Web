@@ -44,7 +44,7 @@ let close_search = document.getElementsByClassName('close-search')[0];
 
 function closeMenu() {
     sideMenu.style.cssText -= 'transform: translateX(0);';
-    sideMenu.style.cssText += 'transform: translateX(500px);';
+    sideMenu.style.cssText += 'transform: translateX(3000px);';
     viewPort[0].style.marginRight = "0";
     viewPort[0].style.cssText -= 'overflow:hidden';
     viewWindow[0].style.cssText = '';
@@ -55,18 +55,18 @@ function closeMenu() {
     
     if (subContainer.style.transform == 'translateX(0px)') {
         console.log("here");
-        subContainer.style.cssText += 'transform: translateX(-500px);';
+        subContainer.style.cssText += 'transform: translateX(-3000px);';
         subContainer.style.cssText -= 'transform: translateX(0px);';
-        mainContainer.style.cssText -= 'transform: translateX(500px)';
+        mainContainer.style.cssText -= 'transform: translateX(3000px)';
         subContainer.innerHTML = ""; 
     }
 
 
 }
 function openMenu() {
-    viewPort[0].style.marginRight = "500px";
+    viewPort[0].style.marginRight = "3000px";
     viewPort[0].style.cssText += 'overflow:hidden';
-    sideMenu.style.cssText -= 'transform: translateX(500px);';
+    sideMenu.style.cssText -= 'transform: translateX(3000px);';
     sideMenu.style.cssText += 'transform: translateX(0);';
     viewWindow[0].style.cssText = 'margin: 0; padding: 0; position:fixed;top:0;left:0;z-index: 200;background-color: rgba(0,0,0,0.5); height: 100%;width: 100%;';
     //console.log(viewWindow[0]);
@@ -77,9 +77,8 @@ document.querySelectorAll('.side-new-content').forEach(row => {
         row.addEventListener('click', () => {
             let subContainer = document.getElementById('side-sub-content-container');
             let mainContainer = document.getElementById('side-content-container');
-            subContainer.style.cssText -= 'transform: translateX(-500px);';
-            subContainer.style.cssText += 'transform: translateX(0);';
-            mainContainer.style.cssText += 'transform: translateX(500px)';
+            subContainer.style.display = 'block';
+            mainContainer.style.display = 'none';
             sideMenu.scrollTo(0, 0);
         });
 });
@@ -88,9 +87,8 @@ document.getElementById('main-menu').addEventListener('click', () => {
 
     let subContainer = document.getElementById('side-sub-content-container');
     let mainContainer = document.getElementById('side-content-container');
-    subContainer.style.cssText += 'transform: translateX(-500px);';
-    subContainer.style.cssText -= 'transform: translateX(0);';
-    mainContainer.style.cssText -= 'transform: translateX(500px)';
+    subContainer.style.display = 'none';
+    mainContainer.style.display = 'block';
     subContentContainer.innerHTML = ""; // reset all pressed behaviours
 });
 
