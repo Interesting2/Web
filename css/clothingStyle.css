@@ -1,14 +1,31 @@
 .clothings-header {
-    margin: 3em;
+    margin-top: 3em;
     text-align: center;
 }
 
 .clothings-header h2{
     font-size: 2em;
     text-transform: uppercase;
+    margin-bottom: 1em;
 }
-.clothings-container {
-    background-color: red;
+
+.num-of-results {
+    text-align: right; 
+    max-width: 2050px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-sliders {
+    font-size: 2em;
+    padding-left: 1.0em;
+    cursor: pointer;
+}
+
+.clothings-container { 
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -20,8 +37,7 @@
 
 }
 
-.clothings-content {
-    background-color: blue;
+.clothings-content { 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,8 +50,7 @@
 
 }
 
-.clothing-product-item-details {
-    background-color: orange;
+.clothing-product-item-details { 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,8 +58,7 @@
 }
 
 .clothings-image {
-    width: 50%;
-    background-color: orange;
+    width: 50%; 
 }
 
 .left-hand {
@@ -60,18 +74,150 @@
     width: 100%;
     max-width: 2050px;
     margin-left: auto;
-    margin-right: auto;
-    background-color: blue;
+    margin-right: auto; 
+    margin-bottom: 2em;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: none;
+    /* animation: superman-disappear 1s ease-in-out; */
+    animation: superman-appear 1s ease-in-out;
+    background-color: #f5f5f5;
+}
+
+.show-hide {
+    display: flex;
+}
+
+@keyframes superman-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes superman-disappear {
+    0% {
+        opacity: 1;
+        transform: translateY(0px); 
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
 }
 
 .clothings-filter-options {
-
+    flex-basis: 30%;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #clothings-options {
     padding: 10px;
 }
 
+
+/* Price Range */
+
+.price-slider-container {
+    max-width: 100%; 
+    flex-basis: 30%;
+    display: flex;
+}
+
+.price-slider-wrapper {
+    flex-basis: 80%;
+}
+
+.price-slider { 
+    height: 1.2em;
+    position: relative;
+    max-width: 100%;
+}
+
+.slider-range { 
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    height: 1.2em;
+    background-color: #fbcdcd;
+}
+
+.price-input {
+    width: 100%;
+}
+
+.price-range-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#price-range {
+    text-align: center;
+    min-width: 7em;
+}
+
+.range-input {
+    /* background-color: orange; */
+    position: relative;
+}
+
+.range-input > input {
+    position: absolute;
+    top: -1.2em;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: purple;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.2em;
+    height: 1.2em; 
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.2em;
+    height: 1.2em; 
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: purple;
+}
+
+.apply-btn { 
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    background: rgb(234, 208, 162);
+}
+
+.load-more {
+    background-color: red;
+    margin: 0 auto;
+    max-width: 10em;
+    text-align: center;
+    padding: 20px;
+    margin-top: 5em;
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 1100px) {
     .clothings-header {
@@ -92,12 +238,19 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
 
     .clothings-container {
         grid-template-columns: repeat(1, 1fr);
+    }
 
+    .clothings-filter-options {
+        margin-bottom: 2em;
+        flex-basis: 100%;
+    }
+
+    .price-slider-container {
+        flex-basis: 100%;
     }
 }
-
 

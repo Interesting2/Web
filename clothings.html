@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/clothingStyle.css"></link>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-    <script src="./js/action.js" defer></script>
+    <script src="./js/product.js" defer></script>
 </head>
 <body>
     <div class="view-port"></div>
@@ -282,17 +282,46 @@
     </div>
 
     <div class="clothings-header">
-        <h2>Clothings Section</h2>
+        <h2>Clothings Section(100)</h2>
+        <div class="num-of-results">
+            <i class="fa fa-sliders"></i>
+            Displaying 1-100 of 100 results
+        </div>
     </div>
     <div class="clothings-filter-container">
         <div class="clothings-filter-options">
+            <p>Sort by: </p>
             <select name="clothings-options" id="clothings-options">
-                <option value="Adidas">Adidas</option>
-                <option value="Nike">Nike</option>
-                <option value="Gucci">Gucci</option>
-                <option value="NorthFace">NorthFace</option>
-              </select>
+                <option value="Low Price">Low Price</option>
+                <option value="High Price">High Price</option>
+                <option value="Most Recent">Most Recent</option>
+                <option value="Oldest">Oldest</option>
+            </select>
         </div>
+
+        <div class="price-slider-container">
+            <div class="price-slider-wrapper">
+                <div class="price-input">
+                    <div class="price-range-wrapper">
+                        <input type="text" name="min-price" value="$250-$750" id="price-range" readonly>
+                    </div>
+                </div>
+    
+                <div class="price-slider">
+                    <div class="slider-range">
+                    </div>
+                </div>
+                
+                <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="1000" value="250" step=5>
+                    <input type="range" class="range-max" min="0" max="1000" value="750" step=5>
+                </div>
+            </div>
+            <div class="apply-btn">
+                Apply
+            </div>
+        </div>
+    
     </div>
     <div class="clothings-container">
         <div class="clothings-content">
@@ -562,17 +591,12 @@
     
     </div>
 
+    <div class="load-more">
+        Load More
+    </div>
+    
     <div class="footer-container">
-        <!--
-        <div class="footer-search">
-          <input type="text" class="footer-searchTerm" placeholder="Please provide us with some feedback!">
-      </div> -
-        <div class = "footer-button">
-          <button type="button" name="button">Feedback</button>
-          <button type="button" name="button">Top</button>
-          <button type="button" name="button">Change Background</button>
-        </div>
-        -->
+
         <div class="special-buttons">
             <button type="button" name="button">
                 <a href="#"><i class="fa fa-file-text-o"></i></a>
