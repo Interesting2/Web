@@ -1,11 +1,28 @@
-const {Client} = require('pg');
+// const { Client } = require('pg');
+const { Pool } = require('pg');
 
-const _client = new Client({
+// const client = new Client({
+// 	user: "postgres",
+// 	password: "08051135",
+// 	host: "localhost",
+// 	port: "5432",
+// 	database: "list_of_all_products"
+// });
+
+const pool = new Pool({
 	user: "postgres",
 	password: "08051135",
 	host: "localhost",
 	port: "5432",
-	database: "list_of_all_products"
+	database: "list_of_all_products",
+	max: 20,
+	connectionTimeoutMillis: 0,
+	idleTimeoutMillis: 0
+});
+
+pool.on('error', (err, client) => {
+	console.error('Error!!!: Unexpected error on idle client', err) // your callback here
+	// process.exit(-1);
 });
 
 // // conenct database
@@ -17,7 +34,6 @@ const _client = new Client({
 // .catch(e => console.log(e))
 // .finally(() => client.end());
 
-const connect = 
-
-exports.connect = connect;
-exports.getDB = getDB;
+// exports.client = client;
+exports.pool = pool;
+// exports.getDB = getDB;

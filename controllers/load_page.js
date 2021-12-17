@@ -5,7 +5,11 @@ exports.loadIndex = (req, res, next) => {
 }
 
 exports.loadPage = (req, res, next) => {
-    res.render(req.params.page);
+    let page = req.params.page;
+    console.log(page);
+    if (page !== "favicon.ico"){
+        res.render(req.params.page);
+    }
 }
 
 // exports.loadClothings = (req, res, next) => {

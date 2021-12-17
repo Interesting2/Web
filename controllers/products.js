@@ -1,11 +1,48 @@
-const {getDB} = require('../util/database');
-const {connect} = require('../util/database');
+// const {getDB} = require('../util/database');
+// const {client} = require('../util/database');
+const {pool} = require('../util/database');
 
-exports.load = (req, res, next) => {
-    console.log("Here " + req.params.function);
-    
-    const db = getDB();
+exports.loadClothings = (req, res, next) => {
+    // req.header('Content-Type')  // "application/json"
+    // req.header('user-agent')    // "Mozilla/5.0 (Macintosh Intel Mac OS X 10_8_5) AppleWebKi..."
+    // req.header('Authorization')
+    // res.setHeader('Content-Type', 'application/json');
+    console.log("Request: " + req.header('user-agent'));
+    const data = req.body;
+    const amount = data.amount;
+    const id = data.id;
+    console.log("Amount: " + amount);
+    console.log("Id: " + id);
+
+    // console.log("Request value: " + req.body.id);
+    console.log("Request param: " + req.params.category);
+    // get request if any
+    pool.connect()
+    .then((client) => {
+        return client.query(`SELECT * FROM ecom_products.products
+                                LIMIT $1`, [amount])
+        // return client.query(`SELECT * FROM ecom_products.products
+        //                         WHERE category = $1
+        //                         AND id >= $2
+        //                         ORDER BY id ASC
+        //                         LIMIT $3`, [req.params.category, id, amount])
+        .then(results => {
+            // client.release();
+            let result = results.rows;
+            // console.log(result);
+            return result;
+        })
+        .then(result => {
+            res.setHeader('Content-Type', 'application/json');
+            res.json(result);
+        })
+        .catch(e => console.log("Error in query: \n" + e))
+        .finally(() => {
+            client.release();
+            console.log("Connection ended");
+        });
+    })
     // res.render(req.params.page);
-    res.json({message: "Received Get Request for " + req.params.function})
+    // res.json(result);
 
 }

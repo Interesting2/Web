@@ -7,23 +7,107 @@ let clothings_filter_container = document.querySelector(".clothings-filter-conta
 const load_more = document.querySelector(".load-more");
 const filter_btn = document.querySelector(".fa-sliders");
 
+const loading_animation = document.querySelector(".loading-animation");
+
+let recentId = 0;
+const maxAmount = 3;
+
+function calcRating(rating) {
+    // calculate how many i tags to create based on the rating. Total rating is 5
+    // if rating is one, then create <i class="fa fa-star"></i>
+    // if rating is two, then create <i class="fa fa-star"></i>, <i class="fa fa-star"></i>, <i class="fa fa-star-o"></i>, <i class="fa fa-star-o"></i>, and <i class="fa fa-star-o"></i>
+    // if rating is five, then create 5 <i class="fa fa-star"></i>
+    // <i class="fa fa-star-half-o"></i> is half a rating
+    // <i class="fa fa-star-o"></i> is no rating
+    let rating_html = "";
+    for (let i = 0; i < rating; i++) {
+        rating_html += `<i class="fa fa-star"></i>`;
+    }
+    if (rating !== parseInt(rating)) {
+        rating_html += `<i class="fa fa-star-half-o"></i>`;
+    }
+    for (let i = 0; i < (5 - rating); i++) {
+        rating_html += `<i class="fa fa-star-o"></i>`;
+    }
+    console.log(rating_html);
+    return rating_html;
+}
+
+function loadMoreClothings(data) {
+    console.log(data);
+    const clothing_animation = document.querySelectorAll('.clothings-animation');
+    if (clothing_animation) {
+        for (let i = 0; i < clothing_animation.length; i++) {
+            clothing_animation[i].classList.remove("clothings-animation");
+        }
+    }
+    data.forEach(element => {
+        recentId = Math.max(recentId, element.id);
+        // check for review ratings
+        let rating_html = calcRating(element.rating);
+
+        let clothings_container = document.querySelector(".clothings-container");
+
+        clothings_container.innerHTML += `
+            <div class="clothings-content clothings-animation">
+                <i class="fa fa-heart-o" id="remove-heart"></i>
+                <i class="fa fa-heart" id="add-heart"></i>
+                <img src="${element.imagesource}" class="clothings-image" alt="adidas_shoes">
+                <div class="clothing-product-content" id="temp-clothing">
+                    ${rating_html}
+                    <div class="clothing-product-item-details">
+                        <div class="left-hand">
+                            <div class="product-name">${element.name}</div>
+                            <div class="product-price">$${element.price}</div>
+                        </div>
+                        <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                        <div class="featured-quantity">
+                            <i class="fa fa-minus-square featured-minus-square"></i>
+                            <div class="featured-product-counter">0</div>
+                            <i class="fa fa-plus-square featured-plus-square"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+        
+    });
+}
+
 load_more.addEventListener("click", () => {
     // fetch data from express server
-    fetch('/clothings/load-more')
-        .then(response => {
-            console.log("Hello response");
-            return response.json();
-        })
-        .then(data => {
-            console.log("Hello data");
-            console.log(data);
-        })
-        .catch(err => {
-            console.log(`Error in fetching \n ${err}`);
-        })
-        .finally(() => {
-            console.log("finally");
-        })
+    load_more.style.display = "none";
+    loading_animation.style.display = "block";
+
+    const info = {'amount': maxAmount, 'id': recentId};
+    const data = JSON.stringify(info);
+    console.log("Send request data: " + data);
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: data
+    }
+    setTimeout(() => {
+        fetch('/clothings/clothing', options)
+            .then(response => {
+                console.log("Hello response");
+                return response.json();
+            })
+            .then(data => new Promise(() => {
+                console.log("Hello json data");
+                loadMoreClothings(data);
+                console.log("finally");
+                recentId ++;
+                loading_animation.style.display = "none";
+                load_more.style.display = 'block';
+    
+            }))
+            .catch(err => {
+                console.log(`Error in fetching \n ${err}`);
+            })
+    }, 3000)
 });
 
 

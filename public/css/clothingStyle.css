@@ -34,6 +34,7 @@
     max-width: 2050px;
     margin-left: auto;
     margin-right: auto;
+    background-color: red;
 
 }
 
@@ -42,6 +43,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: blue;
+    position: relative;
+    /* animation: superman-appear 1s ease-in-out; */
+}
+
+.clothings-animation {
+    animation: superman-appear 1s ease-in-out;
+}
+
+#remove-heart {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .clothing-product-content {
@@ -88,6 +102,7 @@
 .show-hide {
     display: flex;
 }
+
 
 @keyframes superman-appear {
     0% {
@@ -217,6 +232,72 @@ input[type="range"]::-moz-range-thumb {
     padding: 20px;
     margin-top: 5em;
     cursor: pointer;
+}
+
+/* Loading animation */
+
+.loading-animation {
+    max-width: 10em;
+    padding: 3em;
+    /* background-color: blue; */
+    margin: 0 auto;
+    animation: rotating linear 2s infinite;
+    text-align: center;
+    display: none;
+}
+
+.circle {
+    display: inline-block;
+    background-color: green;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    animation: grow 2s infinite;
+    transform: scale(0);
+    position: relative;
+}
+
+.circle:nth-child(1) {
+    right: 0.5em; 
+    animation-delay: 0.6s;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.8s;
+    background-color: red;
+    left: 0.5em;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 1s;
+    background-color: yellow;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+.circle:nth-child(4) {
+    animation-delay: 1.2s;
+    background-color: blue;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media only screen and (max-width: 1100px) {
