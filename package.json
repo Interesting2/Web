@@ -2,7 +2,7 @@
   "name": "web",
   "version": "1.0.0",
   "description": "<p align='center'>     <a href=\"#about\">About</a>     <a href=\"#installation\">Installation</a>     <a href=\"#test\">Testing</a>     <a href=\"#functionalities\">Functionalities</a>     <a href=\"#contribute\">Contribute</a> </p> ***",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
