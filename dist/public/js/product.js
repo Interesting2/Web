@@ -90,7 +90,7 @@ load_more.addEventListener("click", () => {
         body: data
     }
     setTimeout(() => {
-        fetch('/clothings/clothing', options)
+        fetch('https://cryptic-eyrie-30699.herokuapp.com/clothings/clothing', options)
             .then(response => {
                 console.log("Hello response");
                 return response.json();
