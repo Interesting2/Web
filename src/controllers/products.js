@@ -21,8 +21,8 @@ exports.loadClothings = (req, res, next) => {
 
     pool.connect()
     .then((client) => {
-        return JSON.stringify({'message': 'canget'})
-        // return client.query("SELECT 1")
+        // return {'message': 'canget'}
+        return client.query("SELECT * FROM products")
         //return client.query(`SELECT * FROM ecom_products.products
         //                         WHERE category = $1
         //                         AND id >= $2
@@ -32,7 +32,7 @@ exports.loadClothings = (req, res, next) => {
             // client.release();
             // let result = results.rows;
             // console.log(result);
-            return results;
+            return {'message': 'canget'};
         })
         .then(result => {
             res.setHeader('Content-Type', 'application/json');
