@@ -42,6 +42,7 @@ exports.loadClothings = (req, res, next) => {
             console.log("Connection ended");
         });
     })
+    .catch(e => console.log("Error in connection: \n" + e)); 
     // res.render(req.params.page);
     // res.json(result);
 
