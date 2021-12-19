@@ -1,4 +1,4 @@
 .DS_Store
-/util.*
+src/util/database.js
 node_modules
 functions
