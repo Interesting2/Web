@@ -100,7 +100,7 @@ load_more.addEventListener("click", () => {
                 console.log("Hello json data");
                 console.log(data);
                 loadMoreClothings(data);
-                console.log("finally");
+                // console.log("finally");
                 recentId ++;
                 loading_animation.style.display = "none";
                 load_more.style.display = 'block';
