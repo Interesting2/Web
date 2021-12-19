@@ -95,15 +95,16 @@ load_more.addEventListener("click", () => {
                 console.log("Hello response");
                 return response.json();
             })
-            .then(data => new Promise(() => {
+            .then(data => {
                 console.log("Hello json data");
-                loadMoreClothings(data);
+                console.log(data);
+                // loadMoreClothings(data);
                 console.log("finally");
                 recentId ++;
                 loading_animation.style.display = "none";
                 load_more.style.display = 'block';
     
-            }))
+            })
             .catch(err => {
                 console.log(`Error in fetching \n ${err}`);
             })

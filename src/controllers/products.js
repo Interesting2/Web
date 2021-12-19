@@ -7,7 +7,7 @@ exports.loadClothings = (req, res, next) => {
     // req.header('user-agent')    // "Mozilla/5.0 (Macintosh Intel Mac OS X 10_8_5) AppleWebKi..."
     // req.header('Authorization')
     // res.setHeader('Content-Type', 'application/json');
-    console.log("Request: " + req.header('user-agent'));
+    // console.log("Request: " + req.header('user-agent'));
     const data = req.body;
     const amount = data.amount;
     const id = data.id;
@@ -19,8 +19,9 @@ exports.loadClothings = (req, res, next) => {
     // get request if any
     pool.connect()
     .then((client) => {
-        return client.query(`SELECT * FROM ecom_products.products
-                                LIMIT $1`, [amount])
+        return {'message': 'canget'}
+        // return client.query(`SELECT * FROM ecom_products.products
+        //                         LIMIT $1`, [amount])
         // return client.query(`SELECT * FROM ecom_products.products
         //                         WHERE category = $1
         //                         AND id >= $2
@@ -28,9 +29,9 @@ exports.loadClothings = (req, res, next) => {
         //                         LIMIT $3`, [req.params.category, id, amount])
         .then(results => {
             // client.release();
-            let result = results.rows;
+            // let result = results.rows;
             // console.log(result);
-            return result;
+            return results;
         })
         .then(result => {
             res.setHeader('Content-Type', 'application/json');
