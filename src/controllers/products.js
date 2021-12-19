@@ -46,7 +46,7 @@ exports.loadClothings = (req, res, next) => {
                 console.log("Connection ended");
             });
         }
-        getQuery("SELECT * FROM products");
+        getQuery("SELECT * FROM products limit $1", [amount]);
         return;
     })
     .catch(e => console.log("Error in connection: \n" + e)); 
