@@ -17,7 +17,7 @@ exports.loadClothings = (req, res, next) => {
     // console.log("Request value: " + req.body.id);
     console.log("Request param: " + req.params.category);
     // get request if any
-    // return res.json({'message': 'cannot'});
+    return res.json({'message': 'cannot'});
 
     pool.connect()
     .then((client) => {
