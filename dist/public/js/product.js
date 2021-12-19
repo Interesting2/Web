@@ -99,7 +99,7 @@ load_more.addEventListener("click", () => {
             .then(data => {
                 console.log("Hello json data");
                 console.log(data);
-                // loadMoreClothings(data);
+                loadMoreClothings(data);
                 console.log("finally");
                 recentId ++;
                 loading_animation.style.display = "none";
