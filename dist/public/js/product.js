@@ -93,7 +93,7 @@ load_more.addEventListener("click", () => {
         fetch('/clothings/clothing', options)
             .then(response => {
                 console.log("Hello response");
-                return response.json();
+                return response
             })
             .then(data => {
                 console.log("Hello json data");
