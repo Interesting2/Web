@@ -1,2 +1,4 @@
 .DS_Store
 /util.*
+node_modules
+functions

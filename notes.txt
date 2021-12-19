@@ -1,0 +1,5 @@
+https://medium.com/@mjclarke1993/tutorial-communication-between-javascript-clients-and-express-servers-part-1-7ea2cff002e0
+
+https://github.com/TinaXing2012/nodejs_examples/blob/master/day9/util/database.js
+
+https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application
