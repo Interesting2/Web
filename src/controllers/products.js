@@ -34,7 +34,7 @@ exports.loadClothings = (req, res, next) => {
                 // client.release();
                 let result = results.rows;
                 // console.log(result);
-                return results;
+                return result;
             })
             .then(result => {
                 res.setHeader('Content-Type', 'application/json');
