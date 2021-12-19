@@ -10,11 +10,8 @@ const { Pool } = require('pg');
 // });
 
 const pool = new Pool({
-	user: "bvgrxquskuhact",
-	password: "444c775051ba5a4b5a98886e8d4b8cf7c24d1476c4668e1fcb8e0fcf69d26fd2",
-	host: "ec2-52-86-177-34.compute-1.amazonaws.com",
-	port: "5432",
-	database: "dera0birnk6mur",
+	connectionString: "postgres://bvgrxquskuhact:444c775051ba5a4b5a98886e8d4b8cf7c24d1476c4668e1fcb8e0fcf69d26fd2@ec2-52-86-177-34.compute-1.amazonaws.com:5432/dera0birnk6mur",
+    ssl: true
 });
 
 pool.on('error', (err, client) => {
