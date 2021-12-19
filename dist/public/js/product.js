@@ -87,13 +87,14 @@ load_more.addEventListener("click", () => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: data
+        body: data,
+        status: 200
     }
     setTimeout(() => {
         fetch('/clothings/clothing', options)
             .then(response => {
                 console.log("Hello response");
-                return response
+                return response.json()
             })
             .then(data => {
                 console.log("Hello json data");

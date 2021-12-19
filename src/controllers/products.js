@@ -6,7 +6,7 @@ exports.loadClothings = (req, res, next) => {
     // req.header('Content-Type')  // "application/json"
     // req.header('user-agent')    // "Mozilla/5.0 (Macintosh Intel Mac OS X 10_8_5) AppleWebKi..."
     // req.header('Authorization')
-    // res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'application/json');
     // console.log("Request: " + req.header('user-agent'));
     const data = req.body;
     const amount = data.amount;
@@ -17,7 +17,7 @@ exports.loadClothings = (req, res, next) => {
     // console.log("Request value: " + req.body.id);
     console.log("Request param: " + req.params.category);
     // get request if any
-    return {'message': 'cannot'};
+    return res.json({'message': 'cannot'});
 
     // pool.connect()
     // .then((client) => {
