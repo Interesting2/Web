@@ -111,7 +111,7 @@ load_more.addEventListener("click", () => {
             .catch(err => {
                 console.log(`Error in fetching \n ${err}`);
             })
-    }, 3000)
+    }, 0)
 });
 
 
