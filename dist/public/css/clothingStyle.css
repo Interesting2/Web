@@ -34,7 +34,7 @@
     max-width: 2050px;
     margin-left: auto;
     margin-right: auto;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.8);
 
 }
 
@@ -43,7 +43,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: whitesmoke;
     position: relative;
     /* animation: superman-appear 1s ease-in-out; */
 }
@@ -53,6 +53,12 @@
 }
 
 #remove-heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#add-heart {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,12 +81,36 @@
     width: 50%; 
 }
 
+.clothing-overlay-cart {
+    font-size: 20px;
+    padding: 10px 10px 0 0;
+    /* display: none; */
+    cursor: pointer;
+}
+
+.clothing-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+    display: none;
+}
+
+.clothing-product-counter {
+    padding: 0px 20px;
+}
+
+.clothing-item-details {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px auto;
+
+}
+
 .left-hand {
+    flex: 0.6;
 }
-
-.featured-overlay-cart {
-}
-
 
 /* Clothings Filter */
 
@@ -225,7 +255,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .load-more {
-    background-color: red;
+    background-color: rgba(234, 234, 234, 0.8);
     margin: 0 auto;
     max-width: 10em;
     text-align: center;
