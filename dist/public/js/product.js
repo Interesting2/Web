@@ -101,7 +101,9 @@ load_more.addEventListener("click", () => {
                 console.log(data);
                 loadMoreClothings(data);
                 // console.log("finally");
-                recentId ++;
+                if (data.length > 0) {
+                    recentId ++;
+                }
                 loading_animation.style.display = "none";
                 load_more.style.display = 'block';
     
