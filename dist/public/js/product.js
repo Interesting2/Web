@@ -10,7 +10,7 @@ const filter_btn = document.querySelector(".fa-sliders");
 const loading_animation = document.querySelector(".loading-animation");
 
 let recentId = 0;
-const maxAmount = 3;
+const maxAmount = 7;
 
 function calcRating(rating) {
     // calculate how many i tags to create based on the rating. Total rating is 5

@@ -24,12 +24,8 @@ exports.loadClothings = (req, res, next) => {
         // return {'message': 'canget'}
         function getQuery(query) {
             // return ({'message': 'canget'})
-            return client.query(query)
-            //return client.query(`SELECT * FROM ecom_products.products
-            //                         WHERE category = $1
-            //                         AND id >= $2
-            //                         ORDER BY id ASC
-            //                         LIMIT $3`, [req.params.category, id, amount])
+            // return client.query(query)
+            return client.query(query, [req.params.category, id, amount])
             .then(results => {
                 // client.release();
                 let result = results.rows;
@@ -46,7 +42,11 @@ exports.loadClothings = (req, res, next) => {
                 console.log("Connection ended");
             });
         }
-        getQuery("SELECT * FROM products limit 3");
+        getQuery(`SELECT * FROM products
+                    WHERE category = $1
+                    AND id >= $2
+                    ORDER BY id ASC
+                    LIMIT $3`);
         return;
     })
     .catch(e => console.log("Error in connection: \n" + e)); 
