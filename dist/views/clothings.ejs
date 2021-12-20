@@ -282,10 +282,10 @@
     </div>
 
     <div class="clothings-header">
-        <h2>Clothings Section(<%= data.results %>)</h2>
+        <h2>Clothings Section(<span><%= data.rows[Math.min(data.count, data.results) - 1].id %></span>)</h2>
         <div class="num-of-results">
             <i class="fa fa-sliders"></i>
-            Displaying 1-<% data.count %> of <%= data.results %> results 
+            <p>Displaying 1-<span><%= Math.min(data.count, data.results) %></span> of <%= data.results %> results</p>
         </div>
     </div>
     <div class="clothings-filter-container">
@@ -324,29 +324,40 @@
     
     </div>
     <div class="clothings-container">
+        <% for (let i = 0; i < Math.min(data.count, data.results); i++) { %>
+            <div class="clothings-content">
+                <i class="fa fa-heart-o" id="remove-heart"></i>
+                <i class="fa fa-heart" id="add-heart"></i>
+                <img src=<%= data.rows[i].imagesource %> class="clothings-image" alt="adidas_shoes">
+                <div class="clothing-product-content">
+                    <% for (let j = 0; j < data.rows[i].rating; j++) { %>
+                        <i class="fa fa-star"></i>
+                    <% } %>
+
+                    <% if (data.rows[i].rating !== parseInt(data.rows[i].rating)) { %>
+                        <i class="fa fa-star-half-o"></i>
+                    <% } %>
+
+                    <% for (let j = 0; j < (5 - data.rows[i].rating); j++) { %>
+                        <i class="fa fa-star-o"></i>
+                    <% } %>
         
-        <div class="clothings-content">
-            <img src="./resources/adidas_shoes.png" class="clothings-image" alt="adidas_shoes">
-            <div class="clothing-product-content">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-                <i class="fa fa-star-o"></i>
-                <div class="clothing-product-item-details">
-                    <div class="left-hand">
-                        <div class="product-name">Product name Product</div>
-                        <div class="product-price">$100</div>
-                    </div>
-                    <i class="fa fa-shopping-cart featured-overlay-cart"></i>
-                    <div class="featured-quantity">
-                        <i class="fa fa-minus-square featured-minus-square"></i>
-                        <div class="featured-product-counter">1</div>
-                        <i class="fa fa-plus-square featured-plus-square"></i>
+                    <div class="clothing-item-details">
+                        <div class="left-hand">
+                            <div class="product-name"><%= data.rows[i].name %></div>
+                            <div class="product-price">$<%= data.rows[i].price %></div>
+                        </div>
+                        <i class="fa fa-shopping-cart clothing-overlay-cart"></i>
+                        <div class="clothing-quantity">
+                            <i class="fa fa-minus-square clothing-minus-square"></i>
+                            <div class="clothing-product-counter">0</div>
+                            <i class="fa fa-plus-square clothing-plus-square"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        <% } %>
     
     </div>
 

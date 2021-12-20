@@ -704,14 +704,15 @@ hr {
     cursor: pointer;
 }
 
+
+.featured-overlay-image {
+    cursor: pointer;
+}
+
 .featured-overlay-cart {
     font-size: 20px;
     padding: 10px;
     /* display: none; */
-    cursor: pointer;
-}
-
-.featured-overlay-image {
     cursor: pointer;
 }
 
@@ -721,6 +722,10 @@ hr {
     align-items: center;
     flex: 0.7;
     display: none;
+}
+
+.left-hand {
+    flex: 0.5;
 }
 
 .quantity {
