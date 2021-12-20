@@ -282,10 +282,10 @@
     </div>
 
     <div class="clothings-header">
-        <h2>Clothings Section(100)</h2>
+        <h2>Clothings Section(<%= data.results %>)</h2>
         <div class="num-of-results">
             <i class="fa fa-sliders"></i>
-            Displaying 1-100 of 100 results
+            Displaying 1-<% data.count %> of <%= data.results %> results 
         </div>
     </div>
     <div class="clothings-filter-container">

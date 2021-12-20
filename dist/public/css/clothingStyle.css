@@ -49,7 +49,7 @@
 }
 
 .clothings-animation {
-    /* animation: superman-appear 1s ease-in-out; */
+    animation: superman-appear 1s ease-in-out;
 }
 
 #remove-heart {
