@@ -7,7 +7,8 @@ const router = express.Router();
 router.get('/', loadController.loadIndex);
 router.get('/:page', loadController.loadPage);
 
-// router.get('/clothings', loadController.loadClothings);
+router.post('/login', loadController.userLogin);
+router.post('/signup', loadController.userSignup);
 
 
 module.exports = router;

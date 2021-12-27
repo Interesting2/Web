@@ -65,7 +65,7 @@ function updateClothingDOM() {
 
             for (let j = 0; j < clothing_overlay_cart.length; j ++) {
                 if (i != j) {
-                    clothing_overlay_cart[j].style.display = 'flex';
+                    clothing_overlay_cart[j].style.display = 'block';
                     clothing_quantity[j].style.display = 'none';
                 }
             }
@@ -151,13 +151,13 @@ function loadMoreClothings(data) {
             recentId ++;
             loading_animation.style.display = "none";
             load_more.style.display = 'block';
+            loadClothingDOM();
+            updateClothingDOM();
         } else {
             // no more data available 
             load_more.style.display = "none";
             loading_animation.style.display = "none";
         } 
-        loadClothingDOM();
-        updateClothingDOM();
     }
     setTimeout(postProcess, 3000);
 }

@@ -13,9 +13,10 @@ exports.loadPage = (req, res, next) => {
     let count;
 
     let data;
-    console.log(page);
+    // console.log(page);
     if (page !== "favicon.ico"){
         // connect db
+        // res.render(req.params.page);
         pool.connect()
         .then((client) => {
             function getQuery(query1, query2) {
@@ -47,14 +48,27 @@ exports.loadPage = (req, res, next) => {
             let query2 = `SELECT * FROM products
                                 WHERE category = $1`;
             getQuery(query1, query2);
-            return;    
+            return;
         })
-        .catch(e => console.log("Error in connection: \n" + e)); 
-        
+        .catch(e => console.log("Error in connection: \n" + e));
+
     }
 }
 
-// exports.loadClothings = (req, res, next) => {
-//     console.log("here haha");
-//     res.render('clothings');
-// }
+exports.userLogin = (req, res, next) => {
+    const name = req.body.uname;
+    const pwd = req.body.pwd;
+    const data = {'name': name, 'pwd': pwd, 'status': true, 'message': 'Login Successfully'};
+    // console.log(data);
+    res.setHeader('Content-Type', 'application/json');
+    res.json(data);
+}
+
+exports.userSignup = (req, res, next) => {
+    const name = req.body.signup_uname;
+    const pwd = req.body.signup_pwd;
+    const data = {'name': name, 'pwd': pwd, 'status': true, 'message': 'Signup Successfully'};
+    // console.log(data);
+    res.setHeader('Content-Type', 'application/json');
+    res.json(data);
+}

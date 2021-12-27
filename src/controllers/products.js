@@ -49,7 +49,7 @@ exports.loadClothings = (req, res, next) => {
                     LIMIT $3`);
         return;
     })
-    .catch(e => console.log("Error in connection: \n" + e)); 
+    .catch(e => console.log("Error in connection: \n" + e));
     // res.render(req.params.page);
     // res.json(result);
 

@@ -34,10 +34,11 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(json_parser);
 // // home route
 // app.get('/', (req, res) => res.sendFile(path.join('views', 'index.ejs')));
-app.get('/favicon.ico' , function(req , res){/*code*/});
 
 app.use(pageRoutes);
 app.use(productRoutes);
+
+app.get('/favicon.ico' , function(req , res){/*code*/});
 
 // module.exports = app;
 // module.exports.handler = serverless(app);

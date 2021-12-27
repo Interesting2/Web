@@ -1,285 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothings Section</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clothings Section</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="./css/style.css"></link>
-    <link rel="stylesheet" href="./css/swiper.css"></link>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/topStyle.css">
+        <link rel="stylesheet" href="css/bottomStyle.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/clothingStyle.css">
+        <script src="js/product.js" defer></script>
+        <script src="js/top.js" defer></script>
+        <script src="js/login.js" defer></script>
 
-    <link rel="stylesheet" href="./css/clothingStyle.css"></link>
+    </head>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-    <script src="./js/product.js" defer></script>
-</head>
 <body>
-    <div class="view-port"></div>
-    <div class="nav-container">
-        <ul class="nav-bar">
-            <li class="nav-logo">
-                <i class="fa fa-shopping-cart"></i>
-            </li>
-            <li class="nav-logo">
-                <i class="fa fa-user-circle-o"></i>
-            </li>
-            <li class="nav-logo">
-                <i class="fa fa-search mobile-search" onclick="dropDownSearch()"></i>
-            </li>
-            
-            <li class="nav-logo">
-                <i class="fa fa-close close-search" onclick="closeDropDownSearch()"></i>
-            </li>
-
-            <div class="search">
-              <input type="text" class="searchTerm" placeholder="What item are you looking for?">
-              <button class="searchButton"><i class="fa fa-search"></i></button>
-            </div>
-
-            <li class="nav-logo">
-                <!--<a href="#" class="nav-link">Login</a>-->
-                <a href="#" class="ham-menu" onclick="openMenu()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="mobile-search-container">
-            <input type="text" class="mobile-search-term" placeholder="What item are you looking for?">
-        </div>
-    </div>
-    
-    <!--Top Second Nav Bar-->
-    <div class="nav-elem-container">
-        <ul class="nav-elem-bar">
-            <li class="nav-elem"><a href="#" class="nav-link">Health & Wellness </a></li>
-            <li class="nav-elem"><a href="#" class="nav-link">School Supplies</a></li>
-            <li class="nav-elem"><a href="#" class="nav-link">Sporting Goods</a></li>
-            <li class="nav-elem"><a href="#" class="nav-link">Electronics</a></li>
-            <li class="nav-elem"><a href="/clothings" class="nav-link">Clothings</a></li>
-            <li class="nav-elem"><a href="#" class="nav-link">Beauty</a></li>
-        </ul>
-
-    </div>
-
-
-    <!--Side Menu-->
-    <div id="main-side" class="side-menu">
-
-        <!-- Profile Section -->
-        <div class="top-side">
-            <a class="cross-menu" onclick="closeMenu()">&times;</a>
-            <div class="profile-container">
-                <div class="profile-content">
-                    <img class="profile-pic" src="./resources/profile.png" alt="Profile Not Found">
-                    <div class="profile-name">
-                        <li class="account-info"> Welcome Back Anonymous </li>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <!-- Side Content links -->
-        <div id="side-content-container">
-
-            <!--First Section-->
-            <div class="side-content-header">Best Sellers</div>
-            <a href="#">
-                <div class="side-content">Best Seller 1</div>
-            </a>
-            <a href="#">
-                <div class="side-content">Best Seller 2</div>
-            </a>
-            <a href="#">
-                <div class="side-content">Best Seller 3</div>
-            </a>
-
-            <hr>
-
-            <!--Second Section-->
-            <div class="side-content-header">New Products</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link" onclick="openNewProduct1()">New Product 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">New Product 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">New Product 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-
-            <!--Third Section-->
-            <div class="side-content-header">Health & Wellness</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-
-            <!--Fourth Section-->
-            <div class="side-content-header">School Supplies</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-
-            <!--Fifth Section-->
-            <div class="side-content-header">Sporting Goods</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-
-            <!--Sixth Section-->
-            <div class="side-content-header">Electronics</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-
-            <!--Seventh Section-->
-            <div class="side-content-header">Clothings</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-
-            <!--Eight Section-->
-            <div class="side-content-header">Beauty & Skincare</div>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 1</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 2</div>
-                    <i class=""></i>
-                </div>
-            </a>
-            <a href="#">
-                <div class="side-new-content">
-                    <div class="side-link">Cat 3</div>
-                    <i class=""></i>
-                </div>
-            </a>
-
-            <hr>
-        </div>
-        <div id="side-sub-content-container">
-            <div id="main-menu">
-                <i class=""></i>
-                <div class="back">
-                    Back to Main Menu
-                </div>
-            </div>
-            <hr>
-
-            <!--Side Sub Section -->
-            <div id="side-sub-target">
-
-            </div>
-
-        </div>
-
-    </div>
+    <%- include('top'); -%> 
+    <%- include('login'); -%> 
 
     <div class="clothings-header">
         <h2>Clothings Section(<span><%= data.rows[Math.min(data.count, data.results) - 1].id %></span>)</h2>
@@ -288,6 +30,7 @@
             <p>Displaying 1-<span><%= Math.min(data.count, data.results) %></span> of <%= data.results %> results</p>
         </div>
     </div>
+
     <div class="clothings-filter-container">
         <div class="clothings-filter-options">
             <p>Sort by: </p>
@@ -379,102 +122,7 @@
         </div>
     </div>
     
-    <div class="footer-container">
+    <%- include('bottom') -%>
 
-        <div class="special-buttons">
-            <button type="button" name="button">
-                <a href="#"><i class="fa fa-file-text-o"></i></a>
-            </button>
-            <button type="button" name="button">
-                <a href="#"><i class="fa fa-angle-double-up"></i></a>
-            </button>
-            <button type="button" name="button">
-                <i class="fa fa-spinner"></i>
-            </button>
-        </div>
-
-        <div class="footer-content">
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h3> About Us </h3>
-                    <ul>
-                        <li>
-                            <a href="#">Our services</a>
-                        </li>
-                        <li>
-                            <a href="#">About this Website</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms and Conditions</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3> Help </h3>
-                    <ul>
-                        <li>
-                            <a href="#">Customer Service</a>
-                        </li>
-                        <li>
-                            <a href="#">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="#">Order Status</a>
-                        </li>
-                        <li>
-                            <a href="#">Site Map</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li>
-                            <a href="#">Electronics</a>
-                        </li>
-                        <li>
-                            <a href="#">School Supplies</a>
-                        </li>
-                        <li>
-                            <a href="#">Health & Wellness</a>
-                        </li>
-                        <li>
-                            <a href="#">Beauty</a>
-                        </li>
-                        <li>
-                            <a href="/clothings">Clothes</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3> Follow Us </h3>
-                    <div class="social-media">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a> </a>
-                        <a href="#" class="fa fa-instagram"></a> </a>
-                        <a href="#" class="fa fa-youtube"></a> </a>
-                        <a href="#" class="fa fa-github"></a> </a>
-                    </div>
-                </div>
-            </div>
-            <p>Copyright © Defective 2021.</p>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>

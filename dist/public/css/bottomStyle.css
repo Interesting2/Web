@@ -1,0 +1,164 @@
+
+.footer-searchTerm {
+    width: 50%;
+    text-align: center;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+
+}
+
+.footer-container {
+    /* background-color: lightgrey; */
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 20px 0;
+    max-width: 2050px;
+    width: 100%;
+    margin-top: 8em;
+}
+
+.footer-content {
+    /* background: red; */
+}
+
+.footer-content p {
+    font-size: 0.9em;
+}
+
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex-basis: 25%;
+    margin: 25px 0;
+}
+
+.footer-col ul li {
+    list-style-type: none;
+    line-height: 30px;
+}
+
+
+.footer-col ul li a{
+    font-size: 18px;
+    transition: all 0.5s ease;
+    color: #8860D0;
+}
+
+.footer-col ul li:hover {
+    padding-left: 0.5em;
+}
+
+
+.footer-col h3{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.footer-col h3::after{
+    content: "";
+    display: block;
+    border: 1px solid black;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.social-media > .fa{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: orange; */
+    padding-top: 12px;
+    transition: all 0.3s ease-in-out;
+    font-size: 25px;
+}
+
+.social-media > .fa:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.social-media > .fa-facebook {
+    color: #3e7afb
+}
+
+.social-media > .fa-instagram {
+    color: #f421e6;
+}
+
+.social-media > .fa-twitter {
+    color: rgba(73, 166, 242, 0.8);
+}
+
+.social-media > .fa-youtube {
+    color: red;
+}
+
+.social-media > .fa-github {
+    color: purple;
+}
+
+
+
+/*  Footer  */
+
+
+.special-buttons {
+    display: flex;
+}
+
+.special-buttons button {
+    flex-basis: 34%;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    transition: all 0.5s ease-in;
+    border-top: 1px solid black;
+    font-size: 25px;
+    /* background-color: white; */
+    background: none;
+}
+
+.special-buttons .fa-file-text-o {
+    color: brown;
+}
+
+.special-buttons .fa-angle-double-up {
+    color: brown;
+}
+
+.special-buttons .fa-toggle-on {
+    color: brown;
+    cursor: pointer;
+}
+
+.special-buttons > button > a :hover {
+    /* padding-left: 0.5em; */
+}
+
+.special-buttons > button > i:hover {
+    /* padding-left: 0.5em; */
+}
+
+
+/* Footer responsive */
+
+@media only screen and (max-width: 1100px) {
+    .footer-col {
+        flex-basis: 50%;
+        margin: 50px 0;
+    }
+}
+@media only screen and (max-width: 537px) {
+    .footer-col {
+        flex-basis: 100%;
+        margin: 25px 0;
+    }
+
+}

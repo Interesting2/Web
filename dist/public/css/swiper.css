@@ -1,11 +1,11 @@
 
 
-body {
+/* body {
   background: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
-}
+} */
 
 .swiper {
   max-width: 2050px;  
@@ -13,7 +13,11 @@ body {
 
 .mySwiper1 {   
     width: 100%;
-    /* background: red; */
+    border-radius: 20px;
+  background: #f4f4f4;
+  box-shadow:  5px 5px 11px #a1a1a1,
+             -5px -5px 11px #ffffff;
+    margin: 25px 0;
 }
 
 .mySwiper3 { 
@@ -56,6 +60,8 @@ body {
 @media only screen and (max-width: 950px) {
   .mySwiper3 {
     display: block;
+    width: 50%;
+    
   }
   .mySwiper2 {
     display: none;
@@ -64,4 +70,16 @@ body {
   .mySwiper1 {
     margin-top: 100px;
   }
+
+  .swiper-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .mySwiper3 {
+    display: block;
+    width: 100%;
+  }
+  
 }
