@@ -9,8 +9,79 @@ const filter_btn = document.querySelector(".fa-sliders");
 
 const loading_animation = document.querySelector(".loading-animation");
 
-let recentId = 0;
+let clothing_header_content = document.querySelector(".clothings-header h2 span");
+let num_of_results = document.querySelector(".num-of-results p span");
+
+let recentId = null;
 const maxAmount = 7;
+
+let clothing_quantity = document.getElementsByClassName("clothing-quantity");
+let clothing_overlay_cart = document.getElementsByClassName("clothing-overlay-cart");
+let clothing_plus_square = document.getElementsByClassName("clothing-plus-square");
+let clothing_minus_square = document.getElementsByClassName("clothing-minus-square");
+let clothing_product_counter = document.getElementsByClassName("clothing-product-counter");
+
+let remove_heart = document.querySelectorAll("#remove-heart");
+let add_heart = document.querySelectorAll("#add-heart");
+
+
+function loadClothingDOM() {
+    clothing_quantity = document.getElementsByClassName("clothing-quantity");
+    clothing_overlay_cart = document.getElementsByClassName("clothing-overlay-cart");
+    clothing_plus_square = document.getElementsByClassName("clothing-plus-square");
+    clothing_minus_square = document.getElementsByClassName("clothing-minus-square");
+    clothing_product_counter = document.getElementsByClassName("clothing-product-counter");
+    
+    remove_heart = document.querySelectorAll("#remove-heart");
+    add_heart = document.querySelectorAll("#add-heart"); 
+}
+
+function updateClothingDOM() {
+
+    for (let i = 0; i < remove_heart.length; i++) {
+        remove_heart[i].addEventListener("click", () => {
+            // remove_heart display none and add_heart display block
+            remove_heart[i].style.display = "none";
+            add_heart[i].style.display = "inline";
+        })
+        add_heart[i].addEventListener("click", () => {
+            // remove_heart display none and add_heart display block
+            add_heart[i].style.display = "none";
+            remove_heart[i].style.display = "inline";
+        })
+    }
+
+
+    for (let i = 0; i < clothing_overlay_cart.length; i ++) {
+        let clothingEachQuantity = clothing_quantity[i];
+        let clothingEachCart = clothing_overlay_cart[i];
+        let clothingEachPlus = clothing_plus_square[i];
+        let clothingEachMinus = clothing_minus_square[i]
+        let clothingEachCounter = clothing_product_counter[i];
+        
+        clothingEachCart.addEventListener('click', () => {
+            clothingEachCart.style.display = 'none';
+            clothingEachQuantity.style.display = 'flex';
+
+            for (let j = 0; j < clothing_overlay_cart.length; j ++) {
+                if (i != j) {
+                    clothing_overlay_cart[j].style.display = 'block';
+                    clothing_quantity[j].style.display = 'none';
+                }
+            }
+        });
+
+        clothingEachPlus.addEventListener('click', () => {
+            clothingEachCounter.innerHTML = parseInt(clothingEachCounter.innerHTML) + 1;
+        });
+
+        clothingEachMinus.addEventListener('click', () => {
+            let sales = parseInt(clothingEachCounter.innerHTML) - 1;
+            if (sales >= 0) clothingEachCounter.innerHTML = parseInt(clothingEachCounter.innerHTML) - 1;
+        });
+    }
+}
+
 
 function calcRating(rating) {
     // calculate how many i tags to create based on the rating. Total rating is 5
@@ -34,44 +105,67 @@ function calcRating(rating) {
 }
 
 function loadMoreClothings(data) {
-    console.log(data);
-    const clothing_animation = document.querySelectorAll('.clothings-animation');
-    if (clothing_animation) {
-        for (let i = 0; i < clothing_animation.length; i++) {
-            clothing_animation[i].classList.remove("clothings-animation");
+    // console.log(data);
+    function postProcess() {
+        const clothing_animation = document.querySelectorAll('.clothings-animation');
+        if (clothing_animation) {
+            for (let i = 0; i < clothing_animation.length; i++) {
+                clothing_animation[i].classList.remove("clothings-animation");
+            }
         }
-    }
-    data.forEach(element => {
-        recentId = Math.max(recentId, element.id);
-        // check for review ratings
-        let rating_html = calcRating(element.rating);
+        data.forEach(element => {
+            recentId = Math.max(recentId, element.id);
+            // check for review ratings
+            let rating_html = calcRating(element.rating);
 
-        let clothings_container = document.querySelector(".clothings-container");
+            let clothings_container = document.querySelector(".clothings-container");
 
-        clothings_container.innerHTML += `
-            <div class="clothings-content clothings-animation">
-                <i class="fa fa-heart-o" id="remove-heart"></i>
-                <i class="fa fa-heart" id="add-heart"></i>
-                <img src="${element.imagesource}" class="clothings-image" alt="adidas_shoes">
-                <div class="clothing-product-content" id="temp-clothing">
-                    ${rating_html}
-                    <div class="clothing-product-item-details">
-                        <div class="left-hand">
-                            <div class="product-name">${element.name}</div>
-                            <div class="product-price">$${element.price}</div>
+            clothings_container.innerHTML += `
+                <div class="clothings-content clothings-animation">
+                    <i class="fa fa-heart-o" id="remove-heart"></i>
+                    <i class="fa fa-heart" id="add-heart"></i>
+                    <img src="${element.imagesource}" class="clothings-image" alt="adidas_shoes">
+                    <div class="clothing-product-content" id="temp-clothing">
+                        ${rating_html}
+                        <div class="clothing-item-details">
+                            <div class="left-hand">
+                                <div class="product-name">${element.name}</div>
+                                <div class="product-price">$${element.price}</div>
+                            </div>
+                            <i class="fa fa-shopping-cart clothing-overlay-cart"></i>
+                            <div class="clothing-quantity">
+                                <i class="fa fa-minus-square clothing-minus-square"></i>
+                                <div class="clothing-product-counter">0</div>
+                                <i class="fa fa-plus-square clothing-plus-square"></i>
+                            </div>
                         </div>
-                        <i class="fa fa-shopping-cart featured-overlay-cart"></i>
-                        <div class="featured-quantity">
-                            <i class="fa fa-minus-square featured-minus-square"></i>
-                            <div class="featured-product-counter">0</div>
-                            <i class="fa fa-plus-square featured-plus-square"></i>
-                        </div>
+                
                     </div>
+                    
                 </div>
-            </div>
-        `
-        
-    });
+            `
+        });
+
+        if (data.length > 0) {
+            updateResults(data.length);
+            recentId ++;
+            loading_animation.style.display = "none";
+            load_more.style.display = 'block';
+            loadClothingDOM();
+            updateClothingDOM();
+        } else {
+            // no more data available 
+            load_more.style.display = "none";
+            loading_animation.style.display = "none";
+        } 
+    }
+    setTimeout(postProcess, 3000);
+}
+
+function updateResults(num_returned) {
+    clothing_header_content.innerHTML = parseInt(clothing_header_content.innerHTML) + num_returned;
+    num_of_results.innerHTML = parseInt(num_of_results.innerHTML) + num_returned;
+
 }
 
 load_more.addEventListener("click", () => {
@@ -90,28 +184,20 @@ load_more.addEventListener("click", () => {
         body: data,
         status: 200
     }
-    setTimeout(() => {
-        fetch('/clothings/clothing', options)
-            .then(response => {
-                console.log("Hello response");
-                return response.json()
-            })
-            .then(data => {
-                console.log("Hello json data");
-                console.log(data);
-                loadMoreClothings(data);
-                // console.log("finally");
-                if (data.length > 0) {
-                    recentId ++;
-                }
-                loading_animation.style.display = "none";
-                load_more.style.display = 'block';
-    
-            })
-            .catch(err => {
-                console.log(`Error in fetching \n ${err}`);
-            })
-    }, 0)
+    fetch('/clothings/clothing', options)
+        .then(response => {
+            console.log("Hello response");
+            return response.json()
+        })
+        .then(data => {
+            console.log("Hello json data");
+            console.log(data);
+            loadMoreClothings(data);
+            // console.log("finally");
+        })
+        .catch(err => {
+            console.log(`Error in fetching \n ${err}`);
+        })
 });
 
 
@@ -145,3 +231,9 @@ price_range.forEach(input => {
 
     });
 });
+
+window.onload = () => {
+    recentId = parseInt(clothing_header_content.innerHTML) + 1;
+    clothing_header_content.innerHTML = num_of_results.innerHTML;
+    updateClothingDOM(); // 
+}

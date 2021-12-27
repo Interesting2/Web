@@ -42,7 +42,7 @@ exports.loadClothings = (req, res, next) => {
                 console.log("Connection ended");
             });
         }
-        getQuery(`SELECT * FROM products
+        getQuery(`SELECT * FROM ecom_products.products
                     WHERE category = $1
                     AND id >= $2
                     ORDER BY id ASC

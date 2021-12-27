@@ -1,0 +1,104 @@
+<div class="login-container">
+
+    <form action="/login" method="post" id="login-form">
+        <div class="login-header">
+          <h2>Login</h2>
+          <i class="fa fa-address-card-o"></i>
+        </div>
+
+        <div class="login-options">
+            <i class="fa fa-google"></i>
+            <i class="fa fa-windows"></i>
+            <i class="fa fa-github"></i>
+            
+        </div>
+
+        <div class="login-content-container">
+
+            <div class="login-msg">
+                <p class="error-msg">
+                </p>
+                <i class="fa fa-spinner"></i>
+            </div>
+
+            <div class="login-content">
+                <div class="login-input">
+                    <label for="uname"><i class="fa fa-user-circle-o"></i></label>
+                    <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+                </div>
+
+                <div class="login-input">
+                    <label for="psw"><i class="fa fa-lock"></i></label>
+                    <input class="pwd-input" type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
+                </div>
+            </div>
+
+            <label class="remember-me">
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            
+            <div class="login-triggers">
+                <button id="login-btn" class="login-btn" type="submit">Login</button>
+            </div>
+        </div>
+
+        <div class="login-alternatives-content">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <div class="alternatives">
+              <span class="forgot-pwd"> <a href="#">Forgot password?</a></span>
+              <span class="sign-up"> <a href="#">Sign up</a></span>
+          </div>
+        </div>
+    </form>
+
+
+    <form action="/signup" method="post" id="signup-form">
+        <div class="login-header">
+          <h2>Signup</h2>
+          <i class="fa fa-address-card-o"></i>
+        </div>
+
+        <div class="login-options">
+            <i class="fa fa-google"></i>
+            <i class="fa fa-windows"></i>
+            <i class="fa fa-github"></i>
+            
+        </div>
+
+        <div class="login-content-container">
+
+            <div class="login-msg">
+                <p class="error-msg">
+                </p>
+                <i class="fa fa-spinner"></i>
+            </div>
+
+            <div class="login-content">
+                <div class="login-input">
+                    <label for="signup-uname"><i class="fa fa-user-circle-o"></i></label>
+                    <input type="text" placeholder="Enter Username" name="signup-uname" id="signup-uname" required>
+                </div>
+
+                <div class="login-input">
+                    <label for="signup-pwd"><i class="fa fa-lock"></i></label>
+                    <input class="signup-pwd-input" type="password" placeholder="Enter Password" name="signup-pwd" id="signup-pwd" required>
+                </div>
+                <div class="login-input">
+                    <label for="confirm-pwd"><i class="fa fa-check-square"></i></label>
+                    <input class="confirm-pwd-input" type="password" placeholder="Confirm Password" name="confirm-pwd" id="confirm-pwd" required>
+                </div>
+            </div>
+            
+            <div class="login-triggers">
+                <button id="signup-btn" class="login-btn" type="submit">Signup</button>
+            </div>
+        </div>
+
+        <div class="login-alternatives-content">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <div class="alternatives">
+              <span class="login-instead-btn"> <a href="#">Login?</a></span>
+          </div>
+        </div>
+    </form>
+</div>

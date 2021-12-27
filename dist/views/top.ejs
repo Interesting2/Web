@@ -1,0 +1,269 @@
+
+<div class="view-port"></div>
+
+
+<div class="nav-container">
+    <ul class="nav-bar">
+        <li class="nav-logo">
+            <i class="fa fa-shopping-cart"></i>
+        </li>
+        <li class="nav-logo sign-in-icon">
+            <i class="fa fa-sign-in" id="account-page"></i>
+        </li>
+        <li class="nav-logo sign-out-icon">
+            <i class="fa fa-sign-out" id="sign-out-page"></i>
+        </li>
+        <li class="nav-logo">
+            <i class="fa fa-archive" id="saved-collection"></i>
+        </li>
+        <li class="nav-logo">
+            <i class="fa fa-search mobile-search" onclick="dropDownSearch()"></i>
+        </li>
+        
+        <li class="nav-logo">
+            <i class="fa fa-close close-search" onclick="closeDropDownSearch()"></i>
+        </li>
+
+        <div class="search">
+        <input type="text" class="searchTerm" placeholder="What item are you looking for?">
+        <button class="searchButton"><i class="fa fa-search"></i></button>
+        </div>
+
+        <li class="nav-logo">
+            <!--<a href="#" class="nav-link">Login</a>-->
+            <a href="#" class="ham-menu" onclick="openMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="mobile-search-container">
+        <input type="text" class="mobile-search-term" placeholder="What item are you looking for?">
+    </div>
+</div>
+
+<!--Top Second Nav Bar-->
+<div class="nav-elem-container">
+    <ul class="nav-elem-bar">
+        <li class="nav-elem"><a href="#" class="nav-link">Health & Wellness </a></li>
+        <li class="nav-elem"><a href="#" class="nav-link">School Supplies</a></li>
+        <li class="nav-elem"><a href="#" class="nav-link">Sporting Goods</a></li>
+        <li class="nav-elem"><a href="#" class="nav-link">Electronics</a></li>
+        <li class="nav-elem"><a href="/clothings" class="nav-link">Clothings</a></li>
+        <li class="nav-elem"><a href="#" class="nav-link">Beauty</a></li>
+    </ul>
+
+</div>  
+
+    <!--Side Menu-->
+<div id="main-side" class="side-menu">
+
+    <!-- Profile Section -->
+    <div class="top-side">
+        <a class="cross-menu" onclick="closeMenu()">&times;</a>
+        <div class="profile-container">
+            <div class="profile-content">
+                <img class="profile-pic" src="resources/profile.png" alt="Profile Not Found">
+                <div class="profile-name">
+                    <li class="account-info"> Welcome Back Anonymous </li>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Side Content links -->
+    <div id="side-content-container">
+
+        <!--First Section-->
+        <div class="side-content-header">Best Sellers</div>
+        <a href="#">
+            <div class="side-content">Best Seller 1</div>
+        </a>
+        <a href="#">
+            <div class="side-content">Best Seller 2</div>
+        </a>
+        <a href="#">
+            <div class="side-content">Best Seller 3</div>
+        </a>
+
+        <hr>
+
+        <!--Second Section-->
+        <div class="side-content-header">New Products</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link" onclick="openNewProduct1()">New Product 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">New Product 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">New Product 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+
+        <!--Third Section-->
+        <div class="side-content-header">Health & Wellness</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+
+        <!--Fourth Section-->
+        <div class="side-content-header">School Supplies</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+
+        <!--Fifth Section-->
+        <div class="side-content-header">Sporting Goods</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+
+        <!--Sixth Section-->
+        <div class="side-content-header">Electronics</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+
+        <!--Seventh Section-->
+        <div class="side-content-header">Clothings</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+
+        <!--Eight Section-->
+        <div class="side-content-header">Beauty & Skincare</div>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 1</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 2</div>
+                <i class=""></i>
+            </div>
+        </a>
+        <a href="#">
+            <div class="side-new-content">
+                <div class="side-link">Cat 3</div>
+                <i class=""></i>
+            </div>
+        </a>
+
+        <hr>
+    </div>
+    <div id="side-sub-content-container">
+        <div id="main-menu">
+            <i class=""></i>
+            <div class="back">
+                Back to Main Menu
+            </div>
+        </div>
+        <hr>
+
+        <!--Side Sub Section -->
+        <div id="side-sub-target">
+
+        </div>
+
+    </div>
+
+</div>

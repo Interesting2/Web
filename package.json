@@ -4,7 +4,8 @@
   "description": "<p align='center'>     <a href=\"#about\">About</a>     <a href=\"#installation\">Installation</a>     <a href=\"#test\">Testing</a>     <a href=\"#functionalities\">Functionalities</a>     <a href=\"#contribute\">Contribute</a> </p> ***",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
     "path": "^0.12.7",
     "pg": "^8.7.1"
   },
-  "engines": { "node": "12.x" }
+  "engines": {
+    "node": "12.x"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
