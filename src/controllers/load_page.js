@@ -43,6 +43,7 @@ exports.loadPage = (req, res, next) => {
                     console.log("Connection ended");
                 });
             }
+
             let query1 = `SELECT COUNT(*) FROM products
                              WHERE category = $1`;
             let query2 = `SELECT * FROM products
@@ -51,7 +52,6 @@ exports.loadPage = (req, res, next) => {
             return;
         })
         .catch(e => console.log("Error in connection: \n" + e));
-
     }
 }
 
