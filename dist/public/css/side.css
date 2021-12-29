@@ -1,0 +1,233 @@
+.view-port {
+    /* position:fixed;top:0;left:0;z-index: 200;background-color: rgba(0,0,0,0.5); height: 100%;width: 100%; */
+}
+
+#main-side-narrow {
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(244, 244, 244, 0.63);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+    width: 10%;
+    max-width: 80px;
+    min-width: 80px;   
+    /* visibility: hidden; */
+}
+
+.main-side-narrow-content {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    animation: drop-down 0.5s linear;
+    display: none;
+    overflow: scroll;
+    height: 100vh;
+}
+
+.main-side-narrow-content > a > i{
+    font-size: 2.5em;
+    color: #9781c1;
+    margin: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-side-narrow-content > a:hover{
+    border-radius: 10px;
+    background-color: white;
+    color: #8860D0;
+    padding: 0 10px;
+}
+
+.main-side-narrow-content > a > i:hover{
+    color: #8860D0;
+}
+
+.push-left {
+    margin-top: 15px;
+}
+
+.push-top {
+    margin-top: 250px;
+}
+
+@keyframes drop-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes push-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Side Menu */
+#main-side {
+    z-index: 200;
+    background-color: #f2f2f2;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(235.38, 0%, 100%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(231.43, 14.000000000000002%, 91%) 0 transparent 55%);
+
+    backdrop-filter: blur(100px) saturate(200%);
+    -webkit-backdrop-filter: blur(100px) saturate(200%);
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 10px;
+    width: 90%;
+    height: 100vh;
+    min-width: 250px;
+    max-width: 400px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    animation: push-right-side 0.5s linear;
+    overflow: scroll;
+}
+
+@keyframes push-right-side {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes push-left-side {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.top-side {
+    border-top-left-radius: 20px;
+    background: linear-gradient(#c26afc, #ba74e8, #b261e8, #ba74e8, #c26afc);
+    width: 100%;
+    display: flex;
+}
+
+.cross-menu {
+    color: rgb(57, 53, 53);
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile-container{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.profile-content {
+    min-width: 100%;
+    text-align: center;
+}
+
+.profile-pic {
+    object-fit: cover;
+    height: 9.375em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-name {
+    max-width: 100%;
+    max-height: 30%;
+    padding: 15px;
+}
+
+.account-info {
+    text-align: center;
+    list-style: none;
+    font-size: 1.1em;
+    color: #e0dce3;
+}
+
+#side-content-container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+}
+
+.sign-out-container {
+    margin-top: 150px;
+    background: rgba(232, 232, 232, 0.5);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    /* background: blue; */
+    /* backdrop-filter: blur(100px) saturate(200%);
+    -webkit-backdrop-filter: blur(100px) saturate(200%); */
+
+    box-shadow:  1px 1px 3px #c9c9c9,
+                 -1px -1px 3px #c9c9c9; 
+}
+
+.sign-out-container > a {
+    list-style: none;
+    color: #8860D0;
+}
+
+.sign-in-icon {
+    text-align: center;
+}
+
+.sign-in-icon > i, .sign-out-icon > i {
+    margin-right: 1em;
+}
+
+
+.sign-out-icon {
+    display: none;
+}
+
+.side-link {
+    list-style: none;
+    background: rgba(232, 232, 232, 0.5);
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    /* backdrop-filter: blur(100px) saturate(200%);
+    -webkit-backdrop-filter: blur(100px) saturate(200%); */
+
+    box-shadow:  1px 1px 3px #c9c9c9,
+                 -1px -1px 3px #c9c9c9; 
+}
+
+
+.side-link:hover {
+    /* transform: scale(1.05); */
+    box-shadow: none;
+}
+
+.side-link > a {
+    color: #8860D0;
+    font-size: 1em;
+}
+
+.side-link > a > i {
+    font-size: 1.3em;
+    /* background: black; */
+    margin-right: 0.5em;
+}
+
+
