@@ -8,19 +8,24 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         
         <link rel="stylesheet" href="css/topStyle.css">
         <link rel="stylesheet" href="css/bottomStyle.css">
         <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="css/clothingStyle.css">
+        <link rel="stylesheet" href="css/side.css">
+
         <script src="js/product.js" defer></script>
         <script src="js/top.js" defer></script>
         <script src="js/login.js" defer></script>
+        <script src="js/side.js" defer></script>
 
     </head>
 
 <body>
     <%- include('top'); -%> 
+    <%- include('side.ejs'); -%> 
     <%- include('login'); -%> 
 
     <div class="clothings-header">
@@ -97,6 +102,7 @@
                             <i class="fa fa-plus-square clothing-plus-square"></i>
                         </div>
                     </div>
+                    <button class="preview-item-btn">Preview Item</button>
                 </div>
             </div>
 

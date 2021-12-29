@@ -75,7 +75,7 @@ html, body{
 }
 
 .clothings-content:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .clothings-animation {
@@ -106,6 +106,24 @@ html, body{
     justify-content: space-around;
     align-items: center;
 
+}
+
+
+.preview-item-btn {
+    width: 100%;
+    padding: 1em;
+    outline: none;
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow:  3px 3px 5px #c2c2c2,
+    -3px -3px 0px #f9f9f9;
+    border: none;
+    
+}
+
+.preview-item-btn:hover {
+    box-shadow: none;
 }
 
 .clothings-image {
@@ -316,7 +334,7 @@ input[type="range"]::-moz-range-thumb {
 
 .circle {
     display: inline-block;
-    background-color: green;
+    background-color: rgba(179, 0, 255, 0.3);
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
@@ -332,20 +350,20 @@ input[type="range"]::-moz-range-thumb {
 
 .circle:nth-child(2) {
     animation-delay: 0.8s;
-    background-color: red;
+    /* background-color: rgba(179, 0, 255, 0.3); */
     left: 0.5em;
 }
 
 .circle:nth-child(3) {
     animation-delay: 1s;
-    background-color: yellow;
+    /* background-color: rgba(179, 0, 255, 0.5); */
     right: 0.5em;
     top: 0.5em;
 }
 
 .circle:nth-child(4) {
     animation-delay: 1.2s;
-    background-color: blue;
+    /* background-color: rgba(179, 0, 255, 0.8); */
     top: 0.5em;
     left: 0.5em;
 }

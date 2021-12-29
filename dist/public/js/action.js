@@ -157,16 +157,16 @@ for (let i = 0; i < 4; i ++) {
     let featuredEachMinus = featured_minus_square[i]
     let featuredEachCounter = featured_product_counter[i];
 
-    featuredEachOverlay.addEventListener('mouseover', () => {
-        featuredEachImage.style.opacity = '0.4';
-        featuredEachIcon.style.display = 'block';
-        // eachQuantity.style.display = 'none';
-    });
+    // featuredEachOverlay.addEventListener('mouseover', () => {
+    //     featuredEachImage.style.opacity = '0.4';
+    //     featuredEachIcon.style.display = 'block';
+    //     // eachQuantity.style.display = 'none';
+    // });
 
-    featuredEachOverlay.addEventListener('mouseout', () => {
-        featuredEachImage.style.opacity = '1';
-        featuredEachIcon.style.display = 'none';
-    });
+    // featuredEachOverlay.addEventListener('mouseout', () => {
+    //     featuredEachImage.style.opacity = '1';
+    //     featuredEachIcon.style.display = 'none';
+    // });
 
     featuredEachCart.addEventListener('click', () => {
         featuredEachCart.style.display = 'none';
