@@ -8,12 +8,14 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="css/topStyle.css">
         <link rel="stylesheet" href="css/bottomStyle.css">
+        <link rel="stylesheet" href="css/side.css">
 
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
@@ -21,11 +23,13 @@
         <script src="js/action.js" defer></script>
         <script src="js/top.js" defer></script>
         <script src="js/login.js" defer></script> 
+        <script src="js/side.js" defer></script> 
 
     </head>
 
     <body>
         <%- include('top.ejs') %>
+        <%- include('side.ejs') %>
         <%- include('login.ejs') %>
 
         <!--Main Content-->
@@ -108,19 +112,21 @@
                 <h2 class="best-sellers"> Best Sellers </h2>
                 <div class="row">
                     <div class="col-4">
+                        <div class="col-4-header">
+                            <div class="favourite">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
                         <div class="product-item-container">
                             <div class="best-overlay">
                                 <img src="https://magicbeauty.e-sales.app/uploader/files/product_images/bf458f17-59c5-4581-ae5a-d43059c19cc1.jpeg" class="best-overlay-image" alt="adidas_shoes">
                                 <div class="best-overlay-icons" id="overlay-icons1">
-                                    <div class="favourite">
-                                        <i class="fa fa-heart-o"></i>
-                                        <i class="fa fa-heart"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
                                     <i class="fa fa-shopping-cart best-overlay-cart"></i>
                                     <div class="best-quantity">
                                         <i class="fa fa-minus-square best-minus-square"></i>
@@ -138,19 +144,21 @@
                         </div>
                     </div>
                     <div class="col-4">
+                        <div class="col-4-header">
+                            <div class="favourite">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
                         <div class="product-item-container">
                             <div class="best-overlay">
-                                <img src="resources/adidas_shoes.png" class="best-overlay-image" alt="adidas_shoes">
+                                <img src="../resources/adidas_shoes.png" class="best-overlay-image" alt="adidas_shoes">
                                 <div class="best-overlay-icons" id="overlay-icons1">
-                                    <div class="favourite">
-                                        <i class="fa fa-heart-o"></i>
-                                        <i class="fa fa-heart"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                    </div>
                                     <i class="fa fa-shopping-cart best-overlay-cart"></i>
                                     <div class="best-quantity">
                                         <i class="fa fa-minus-square best-minus-square"></i>
@@ -159,36 +167,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-content">
-                                <div class="product-name">Product name</div>
-                                <div class="product-price">$100</div>
-                                <button class="preview-btn">Preview</button>
-                            </div>
-                        </div>
 
-                    </div>
-                    <div class="col-4">
-                        <div class="product-item-container">
-                            <div class="best-overlay">
-                                <img src="resources/adidas_shoes.png" class="best-overlay-image" alt="adidas_shoes">
-                                <div class="best-overlay-icons" id="overlay-icons1">
-                                    <div class="favourite">
-                                        <i class="fa fa-heart-o"></i>
-                                        <i class="fa fa-heart"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                    </div>
-                                    <i class="fa fa-shopping-cart best-overlay-cart"></i>
-                                    <div class="best-quantity">
-                                        <i class="fa fa-minus-square best-minus-square"></i>
-                                        <div class="best-product-counter">1</div>
-                                        <i class="fa fa-plus-square best-plus-square"></i>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="product-content">
                                 <div class="product-name">Product name</div>
                                 <div class="product-price">$100</div>
@@ -197,19 +176,21 @@
                         </div>
                     </div>
                     <div class="col-4">
+                        <div class="col-4-header">
+                            <div class="favourite">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
                         <div class="product-item-container">
                             <div class="best-overlay">
-                                <img src="resources/adidas_shoes.png" class="best-overlay-image" alt="adidas_shoes">
+                                <img src="https://magicbeauty.e-sales.app/uploader/files/product_images/bf458f17-59c5-4581-ae5a-d43059c19cc1.jpeg" class="best-overlay-image" alt="adidas_shoes">
                                 <div class="best-overlay-icons" id="overlay-icons1">
-                                    <div class="favourite">
-                                        <i class="fa fa-heart-o"></i>
-                                        <i class="fa fa-heart"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
                                     <i class="fa fa-shopping-cart best-overlay-cart"></i>
                                     <div class="best-quantity">
                                         <i class="fa fa-minus-square best-minus-square"></i>
@@ -218,6 +199,39 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="product-content">
+                                <div class="product-name">Product name</div>
+                                <div class="product-price">$100</div>
+                                <button class="preview-btn">Preview</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4-header">
+                            <div class="favourite">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-item-container">
+                            <div class="best-overlay">
+                                <img src="https://magicbeauty.e-sales.app/uploader/files/product_images/bf458f17-59c5-4581-ae5a-d43059c19cc1.jpeg" class="best-overlay-image" alt="adidas_shoes">
+                                <div class="best-overlay-icons" id="overlay-icons1">
+                                    <i class="fa fa-shopping-cart best-overlay-cart"></i>
+                                    <div class="best-quantity">
+                                        <i class="fa fa-minus-square best-minus-square"></i>
+                                        <div class="best-product-counter">1</div>
+                                        <i class="fa fa-plus-square best-plus-square"></i>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="product-content">
                                 <div class="product-name">Product name</div>
                                 <div class="product-price">$100</div>
@@ -234,13 +248,48 @@
                 <h2 class = "featured-products"> Featured Products </h2>
                 <div class="row">
                     <div class="col-4">
+                        <div class="col-4-header">  
+                            <div class="col-4-header-heart">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
                         <div class="product-item-container">
-                            <div class="featured-overlay">
-                                <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
-                                <div class="featured-overlay-icons" id="overlay-icons1">
-                                    <i class="fa fa-heart-o"></i>
-                                    <i class="fa fa-heart"></i>
+                            <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
+                            <div class="product-content">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="product-item-details">
+                                    <div class="left-hand">
+                                        <div class="product-name">Product name</div>
+                                        <div class="product-price">$100</div>
+                                    </div>
+                                    <div class="featured-overlay-cart-container">
+                                        <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                                    </div>
+                                    <div class="featured-quantity">
+                                        <i class="fa fa-minus-square featured-minus-square"></i>
+                                        <div class="featured-product-counter">1</div>
+                                        <i class="fa fa-plus-square featured-plus-square"></i>
+                                    </div>
                                 </div>
+                                <button class="preview-item-btn">Preview Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4-header">  
+                            <div class="col-4-header-heart">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-item-container">
+                            <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
+                            <div class="featured-overlay">
                             </div>
                             <div class="product-content">
                                 <i class="fa fa-star"></i>
@@ -262,81 +311,20 @@
                                         <i class="fa fa-plus-square featured-plus-square"></i>
                                     </div>
                                 </div>
+                                <button class="preview-item-btn">Preview Item</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="product-item-container">
-                            <div class="featured-overlay">
-                                <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
-                                <div class="featured-overlay-icons" id="overlay-icons1">
-                                    <i class="fa fa-heart-o"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <div class="product-item-details">
-                                    <div class="left-hand">
-                                        <div class="product-name">Product name</div>
-                                        <div class="product-price">$100</div>
-                                    </div>
-                                    <div class="featured-overlay-cart-container">
-                                        <i class="fa fa-shopping-cart featured-overlay-cart"></i>
-                                    </div>
-                                    <div class="featured-quantity">
-                                        <i class="fa fa-minus-square featured-minus-square"></i>
-                                        <div class="featured-product-counter">1</div>
-                                        <i class="fa fa-plus-square featured-plus-square"></i>
-                                    </div>
-                                </div>
+                        <div class="col-4-header">  
+                            <div class="col-4-header-heart">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4">
                         <div class="product-item-container">
+                            <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
                             <div class="featured-overlay">
-                                <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
-                                <div class="featured-overlay-icons" id="overlay-icons1">
-                                    <i class="fa fa-heart-o"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <div class="product-item-details">
-                                    <div class="left-hand">
-                                        <div class="product-name">Product name</div>
-                                        <div class="product-price">$100</div>
-                                    </div>
-                                    <div class="featured-overlay-cart-container">
-                                        <i class="fa fa-shopping-cart featured-overlay-cart"></i>
-                                    </div>
-                                    <div class="featured-quantity">
-                                        <i class="fa fa-minus-square featured-minus-square"></i>
-                                        <div class="featured-product-counter">1</div>
-                                        <i class="fa fa-plus-square featured-plus-square"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="product-item-container">
-                            <div class="featured-overlay">
-                                <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
-                                <div class="featured-overlay-icons" id="overlay-icons1">
-                                    <i class="fa fa-heart-o"></i>
-                                    <i class="fa fa-heart"></i>
-                                </div>
                             </div>
                             <div class="product-content">
                                 <i class="fa fa-star"></i>
@@ -358,6 +346,42 @@
                                         <i class="fa fa-plus-square featured-plus-square"></i>
                                     </div>
                                 </div>
+                                <button class="preview-item-btn">Preview Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4-header">  
+                            <div class="col-4-header-heart">
+                                <i class="fa fa-heart-o"></i>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-item-container">
+                            <img src="resources/adidas_shoes.png" class="featured-overlay-image" alt="adidas_shoes">
+                            <div class="featured-overlay">
+                            </div>
+                            <div class="product-content">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="product-item-details">
+                                    <div class="left-hand">
+                                        <div class="product-name">Product name</div>
+                                        <div class="product-price">$100</div>
+                                    </div>
+                                    <div class="featured-overlay-cart-container">
+                                        <i class="fa fa-shopping-cart featured-overlay-cart"></i>
+                                    </div>
+                                    <div class="featured-quantity">
+                                        <i class="fa fa-minus-square featured-minus-square"></i>
+                                        <div class="featured-product-counter">1</div>
+                                        <i class="fa fa-plus-square featured-plus-square"></i>
+                                    </div>
+                                </div>
+                                <button class="preview-item-btn">Preview Item</button>
                             </div>
                         </div>
                     </div>
@@ -374,7 +398,7 @@
                     <div class="swiper-slide">
                         <div class="slider-box">
                             <div class="product-container">
-                                <img src="resources/adidas_shoes.png" class="best-overlay-image" alt="adidas_shoes">
+                                <img src="resources/adidas_shoes.png" class="" alt="adidas_shoes">
                             </div>
 
                             <div class="product-details">
@@ -844,13 +868,19 @@
 
         <!-- Shop by Category-->
         <div class="shop-container">
-            <h2 class="miscellaneous">Miscellaneous</h2>
+            <h2 class="top-deals">Top Deals</h2>
             <div class="category-content">
                 <div class="row">
                     <div class="col-6">
-
-                        <h2> Product 1 </h4>
+                        <h2> Product 1</h2>
                         <div class="overlay">
+                            <span class="deals-discount">
+                                <i class="deals-symbol">$</i>
+                                <i class="deals-amount">
+                                    59
+                                </i>
+                            </span>
+
                             <img src="resources/adidas_shoes.png" class="overlay-image" alt="adidas_shoes">
                             <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
@@ -863,14 +893,22 @@
                                     <i class="fa fa-plus-square plus-square"></i>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
                     <div class="col-6">
-                        <h2> Product 2 </h2>
+                        <h2> Product 2</h2>
                         <div class="overlay">
+                            <span class="deals-discount">
+                                <i class="deals-symbol">$</i>
+                                <i class="deals-amount">
+                                    59
+                                </i>
+                            </span>
+
                             <img src="resources/adidas_shoes.png" class="overlay-image" alt="adidas_shoes">
-                            <div class="overlay-icons" id="overlay-icons1">
+                            <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
                                 <i class="fa fa-heart"></i>
@@ -881,15 +919,22 @@
                                     <i class="fa fa-plus-square plus-square"></i>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
                     <div class="col-6">
-
-                        <h2> Product 3 </h2>
+                        <h2> Product 3</h2>
                         <div class="overlay">
+                            <span class="deals-discount">
+                                <i class="deals-symbol">$</i>
+                                <i class="deals-amount">
+                                    59
+                                </i>
+                            </span>
+
                             <img src="resources/adidas_shoes.png" class="overlay-image" alt="adidas_shoes">
-                            <div class="overlay-icons" id="overlay-icons1">
+                            <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
                                 <i class="fa fa-heart"></i>
@@ -900,15 +945,22 @@
                                     <i class="fa fa-plus-square plus-square"></i>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
                     <div class="col-6">
-
-                        <h2> Product 4 </h2>
+                        <h2> Product 4</h2>
                         <div class="overlay">
+                            <span class="deals-discount">
+                                <i class="deals-symbol">$</i>
+                                <i class="deals-amount">
+                                    59
+                                </i>
+                            </span>
+
                             <img src="resources/adidas_shoes.png" class="overlay-image" alt="adidas_shoes">
-                            <div class="overlay-icons" id="overlay-icons1">
+                            <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
                                 <i class="fa fa-heart"></i>
@@ -919,15 +971,22 @@
                                     <i class="fa fa-plus-square plus-square"></i>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
                     <div class="col-6">
-
-                        <h2> Product 5 </h2>
+                        <h2> Product 5</h2>
                         <div class="overlay">
+                            <span class="deals-discount">
+                                <i class="deals-symbol">$</i>
+                                <i class="deals-amount">
+                                    59
+                                </i>
+                            </span>
+
                             <img src="resources/adidas_shoes.png" class="overlay-image" alt="adidas_shoes">
-                            <div class="overlay-icons" id="overlay-icons1">
+                            <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
                                 <i class="fa fa-heart"></i>
@@ -938,15 +997,22 @@
                                     <i class="fa fa-plus-square plus-square"></i>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
                     <div class="col-6">
-
-                        <h2> Product 6 </h2>
+                        <h2> Product 6</h2>
                         <div class="overlay">
+                            <span class="deals-discount">
+                                <i class="deals-symbol">$</i>
+                                <i class="deals-amount">
+                                    59
+                                </i>
+                            </span>
+
                             <img src="resources/adidas_shoes.png" class="overlay-image" alt="adidas_shoes">
-                            <div class="overlay-icons" id="overlay-icons1">
+                            <div class="overlay-icons" id="">
                                 <i class="fa fa-search"></i>
                                 <i class="fa fa-heart-o"></i>
                                 <i class="fa fa-heart"></i>
@@ -957,8 +1023,8 @@
                                     <i class="fa fa-plus-square plus-square"></i>
                                 </div>
                             </div>
+                            
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -994,17 +1060,22 @@
 
 
                 <div class="full-right">
-                    <div class="top-right-background">
-                        <div class="top-right">
-                            <div class="clothing-collection">
-                                <div class="clothing-content">
-                                    <h2 class="clothing-header"> Clothing Collection</h2>
-                                    <p class="clothing-description">Lorem ipsum dolor sit am Lorem ipsum
-                                        Lorem ipsum Lorem ipsum Lorem ipsum dolor sit amet orem ipsum dolor sit am Lorem ipsum</p>
-                                    <div class="clothing-btn">Explore</div>
-                                </div>
-                                <!-- <img src="resources/adidas_shoes.png" class="clothing-image" alt="adidas_shoes">  -->
+
+                    <div class="top-right">
+                        <div class="clothing-collection">
+                            <div class="clothing-content-image">
+                                <img src="resources/adidas_shoes.png" class="clothing-image" alt="adidas_shoes">
                             </div>
+                            
+                            <div class="clothing-content">
+                                <h2 class="clothing-header"> Clothing Collection</h2>
+                                <p class="clothing-description">Lorem ipsum dolor sit am Lorem ipsum
+                                    Lorem ipsum Lorem ipsum Lorem ipsum dolor sit amet orem ipsum dolor sit am Lorem ipsum</p>
+                                <div class="clothing-btn">Explore</div>
+                            </div>
+
+                            
+                            <!-- <img src="resources/adidas_shoes.png" class="clothing-image" alt="adidas_shoes">  -->
                         </div>
                     </div>
 

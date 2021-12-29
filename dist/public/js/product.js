@@ -139,6 +139,7 @@ function loadMoreClothings(data) {
                                 <i class="fa fa-plus-square clothing-plus-square"></i>
                             </div>
                         </div>
+                        <button class="preview-item-btn">Preview Item</button>
                 
                     </div>
                     
