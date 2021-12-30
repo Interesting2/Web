@@ -10,6 +10,7 @@ let ham_menu = document.getElementsByClassName('ham-menu')[0];
 
 function closeMenu() {
     viewPort[0].style.overflow = "scroll";
+    viewPort[0].style.height = '';
     sideMenu.style.animation = 'push-left-side 0.5s linear';
     setTimeout(() => {
         sideMenu.style.display = 'none';
@@ -21,7 +22,7 @@ function closeMenu() {
 }
 
 function openMenu() {
-
+    viewPort[0].style.height = '100vh';
     viewPort[0].style.overflow = "hidden";
     sideMenu.style.display = 'block';
     viewWindow[0].style.cssText = 'position:fixed;top:0;left:0;z-index: 200;background-color: rgba(0,0,0,0.5); height: 100%;width: 100%;';

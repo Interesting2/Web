@@ -840,9 +840,10 @@ box-shadow:  -6px 6px 1px #cccccc,
 }
 
 .beauty-btn:hover {
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-box-shadow: inset -6px 6px 0px #cccccc,
-            inset 6px -6px 0px #ffffff;
+    position: relative;
+    top: -0.1em;
+    right: -0.1em;
+    box-shadow: none; 
 }
 
 .beauty-image {
@@ -895,9 +896,10 @@ box-shadow:  -6px 6px 1px #cccccc,
 }
 
 .electronics-btn:hover {
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-box-shadow: inset -6px 6px 0px #cccccc,
-            inset 6px -6px 0px #ffffff;
+    position: relative;
+    top: -0.1em;
+    right: -0.1em;
+    box-shadow: none;
 }
 
 .electronics-image {
@@ -1069,9 +1071,10 @@ box-shadow:  -6px 6px 1px #cccccc,
 }
 
 .supplies-btn:hover {
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-box-shadow: inset -6px 6px 0px #cccccc,
-            inset 6px -6px 0px #ffffff;
+    position: relative;
+    top: -0.1em;
+    right: -0.1em;
+    box-shadow: none;
 }
 
 .health-btn {
@@ -1086,9 +1089,10 @@ box-shadow:  -6px 6px 1px #cccccc,
 }
 
 .health-btn:hover {
-    background: linear-gradient(225deg, #e6e6e6, #ffffff);
-box-shadow: inset -6px 6px 0px #cccccc,
-            inset 6px -6px 0px #ffffff;
+    position: relative;
+    top: -0.1em;
+    right: -0.1em;
+    box-shadow: none;
 }
 
 .health-collection {
