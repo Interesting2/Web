@@ -61,24 +61,3 @@ function closeDropDownSearch() {
     close_search.style.display = 'none';
 }
 
-// function openNewProduct1() {
-//     subContentContainer.innerHTML = '<div class="side-content-header">Beauty & Skincare</div>\
-//                                     <a href="#">\
-//                                     <div class="side-new-content">\
-//                                         <div class="side-link">Cat 1</div>\
-//                                         <i class=""></i>\
-//                                     </div>\
-//                                     </a>\
-//                                     <a href="#"> \
-//                                     <div class="side-new-content">\
-//                                         <div class="side-link">Cat 2</div>\
-//                                         <i class=""></i>\
-//                                     </div>\
-//                                     </a>\
-//                                     <a href="#">\
-//                                     <div class="side-new-content">\
-//                                         <div class="side-link">Cat 3</div>\
-//                                         <i class="></i>\
-//                                     </div>\
-//                                     </a>'
-// }

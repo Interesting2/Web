@@ -15,17 +15,23 @@
         <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="css/clothingStyle.css">
         <link rel="stylesheet" href="css/side.css">
+        <link rel="stylesheet" href="css/shopping_list.css">
+        <link rel="stylesheet" href="css/saved.css">
 
         <script src="js/product.js" defer></script>
         <script src="js/top.js" defer></script>
         <script src="js/login.js" defer></script>
         <script src="js/side.js" defer></script>
+        <script src="js/shopping_list.js" defer></script>
+        <script src="js/saved.js" defer></script>
 
     </head>
 
 <body>
     <%- include('top'); -%> 
     <%- include('side.ejs'); -%> 
+    <%- include('shopping_list.ejs') %>
+    <%- include('saved.ejs') %>
     <%- include('login'); -%> 
 
     <div class="clothings-header">
