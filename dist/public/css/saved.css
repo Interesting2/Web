@@ -1,0 +1,140 @@
+
+#saved-list-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.saved-list-wrapper {
+    background: #f4f4f4;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    animation: card-slide-in 0.5s linear;
+    z-index: 300;
+    
+}
+
+
+@keyframes card-slide-in {
+    /* card enter from left to right */
+    0% {
+        transform: translateX(-100%);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateX(-50%);
+        opacity: 0.6;
+    }
+    
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes card-slide-out {
+    /* card enter from left to right */
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%);
+        opacity: 0.6;
+    }
+    
+    100% {
+        transform: translateX(-100%);
+        opacity: 0.3;
+    }
+}
+
+.saved-list-header {
+    display: flex;
+    justify-content: center;
+}
+
+.saved-list-header > h3{
+    font-size: 1.3em;
+    margin-top: 4px;
+}
+
+.saved-logo-wrapper {
+    font-size: 1.8em;
+    color: rgba(231, 141, 249, 1);
+    margin-right: 0.5em;
+}
+
+.saved-list-content {
+    overflow: scroll;
+    height: 100%;
+    background: #f4f4f4;
+    box-shadow:  1px 1px 1px #e1e1e1,
+                 -1px -1px 1px #dedede;
+    
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 300;
+}
+
+.saved-item {
+    display: flex;
+}
+
+.saved-product {
+    flex: 0.7;
+    text-align: center;
+}
+
+.saved-product > img {
+    width: 150px;
+}
+
+.saved-direct {
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.saved-add-to-cart {
+    display: flex;
+}
+
+.saved-add-to-cart > input {
+    width: 80%;
+    text-align: center;
+}
+
+.saved-add-to-cart-btn {
+    border: none;
+    cursor: pointer;
+}
+.saved-direct-btn {
+    margin-top: 10px;
+    width: 80%;
+    border: none;
+    background: #ffffff;
+    box-shadow:  3px 3px 1px #e6e6e6,
+                 -3px -3px 1px #ebebeb;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.saved-direct-btn:hover {
+    box-shadow: none;
+}
