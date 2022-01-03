@@ -42,14 +42,14 @@ a {
     margin: 0 10px;
 }
 
-.nav-logo:hover {
+.nav-logo > i:hover {
     transform: scale(1.2);
 }
 
 .nav-logo .fa, .search .fa {
     cursor: pointer;
     text-align: center;
-    transition: transform .7s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     font-size: 2.0em;
 }
 

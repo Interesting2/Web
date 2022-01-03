@@ -32,6 +32,14 @@ let featured_product_counter = document.getElementsByClassName("featured-product
 let heart_empty = document.getElementsByClassName('fa-heart-o');
 let heart_filled = document.getElementsByClassName('fa-heart');
 
+let preview_btn = document.getElementsByClassName('preview-btn');
+// console.log(preview_btn[0]);
+for (let i = 0; i < preview_btn.length; i ++) {
+    preview_btn[i].addEventListener('click', function() {
+        window.location.href = '/preview';
+    });
+}
+
 for (let i = 0; i < heart_empty.length; i ++) {
     // console.log(i);
     let eachHeartEmpty = heart_empty[i];
@@ -101,53 +109,53 @@ for (let i = 0; i < 6; i ++) {
 }
 
 
-for (let i = 0; i < 4; i ++) {
-    let bestEachOverlay = best_overlay[i];
-    let bestEachImage = best_overlay_images[i];
-    let bestEachIcon = best_overlay_icons[i];
-    let bestEachQuantity = best_quantity[i];
-    let bestEachCart = best_overlay_cart[i];
-    let bestEachPlus =best_plus_square[i];
-    let bestEachMinus = best_minus_square[i]
-    let bestEachCounter = best_product_counter[i];
+// for (let i = 0; i < 4; i ++) {
+//     let bestEachOverlay = best_overlay[i];
+//     let bestEachImage = best_overlay_images[i];
+//     let bestEachIcon = best_overlay_icons[i];
+//     let bestEachQuantity = best_quantity[i];
+//     let bestEachCart = best_overlay_cart[i];
+//     let bestEachPlus =best_plus_square[i];
+//     let bestEachMinus = best_minus_square[i]
+//     let bestEachCounter = best_product_counter[i];
 
-    bestEachOverlay.addEventListener('mouseover', () => {
-        console.log(1);
-        bestEachImage.style.opacity = '0.4';
-        bestEachIcon.style.display = 'flex';
-        // eachQuantity.style.display = 'none';
-    });
+//     bestEachOverlay.addEventListener('mouseover', () => {
+//         console.log(1);
+//         bestEachImage.style.opacity = '0.4';
+//         bestEachIcon.style.display = 'flex';
+//         // eachQuantity.style.display = 'none';
+//     });
 
-    bestEachOverlay.addEventListener('mouseout', () => {
-        bestEachImage.style.opacity = '1';
-        bestEachIcon.style.display = 'none';
-    });
+//     bestEachOverlay.addEventListener('mouseout', () => {
+//         bestEachImage.style.opacity = '1';
+//         bestEachIcon.style.display = 'none';
+//     });
 
-    bestEachCart.addEventListener('click', () => {
-        bestEachCart.style.display = 'none';
-        bestEachQuantity.style.display = 'flex';
+//     bestEachCart.addEventListener('click', () => {
+//         bestEachCart.style.display = 'none';
+//         bestEachQuantity.style.display = 'flex';
 
-        for (let j = 0; j < 4; j ++) {
-            if (i != j) {
-                best_overlay_cart[j].style.display = 'flex';
-                best_quantity[j].style.display = 'none';
-            }
-        }
-    });
+//         for (let j = 0; j < 4; j ++) {
+//             if (i != j) {
+//                 best_overlay_cart[j].style.display = 'flex';
+//                 best_quantity[j].style.display = 'none';
+//             }
+//         }
+//     });
 
-    bestEachPlus.addEventListener('click', () => {
-        bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) + 1;
-    });
+//     bestEachPlus.addEventListener('click', () => {
+//         bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) + 1;
+//     });
 
-    bestEachMinus.addEventListener('click', () => {
-        let sales = parseInt(bestEachCounter.innerHTML) - 1;
-        if (sales >= 0) bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) - 1;
-    });
+//     bestEachMinus.addEventListener('click', () => {
+//         let sales = parseInt(bestEachCounter.innerHTML) - 1;
+//         if (sales >= 0) bestEachCounter.innerHTML = parseInt(bestEachCounter.innerHTML) - 1;
+//     });
 
 
-}
+// }
 
-for (let i = 0; i < 4; i ++) {
+for (let i = 0; i < 8; i ++) {
     let featuredEachOverlay = featured_overlay[i];
     let featuredEachImage = featured_overlay_images[i];
     let featuredEachIcon = featured_overlay_icons[i];

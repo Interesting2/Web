@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preview Page</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/topStyle.css">
+        <link rel="stylesheet" href="css/bottomStyle.css">
+        <link rel="stylesheet" href="css/side.css">
+        <link rel="stylesheet" href="css/shopping_list.css">
+        <link rel="stylesheet" href="css/saved.css">
+
+        <link rel="stylesheet" href="css/preview.css">
+
+        <script src="js/top.js" defer></script>
+        <script src="js/login.js" defer></script> 
+        <script src="js/side.js" defer></script> 
+        <script src="js/shopping_list.js" defer></script>
+        <script src="js/saved.js" defer></script>
+
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/swiper.css">
+        <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script> -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+        <script src="js/preview.js" defer></script>
+    </head>
+    <body>
+        <%- include('top.ejs') %>
+        <%- include('side.ejs') %>
+        <%- include('shopping_list.ejs') %>
+        <%- include('login.ejs') %>
+
+        <div id="preview-item-container">
+            <div class="preview-item-wrapper">
+                <div class="preview-item-image-wrapper">
+                    <img src="../resources/adidas_shoes.png" alt="Item not found">
+                </div>
+                <div class="preview-item-info-wrapper">
+                    <div class="preview-item-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="preview-item-header">
+                        <p>Adidas Shoes 123</p>
+                        <i class="preview-item-price">$100</i>
+                    </div>
+                    
+                    <div class="preview-item-content">
+                        <div class="preview-item-content-header">
+                            <p class="preview-item-content-header-desc" onclick="openDesc()">Description</p>
+                            <p class="preview-item-content-header-details" onclick="openDetails()">Details</p>
+                            <p class="preview-item-content-header-reviews" onclick="openReviews()">Reviews</p>
+                        </div>
+                        <div class="preview-item-desc-info">
+                            <div class="preview-item-desc">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Porro illum quae veniam consectetur iusto quam deleniti tempore, 
+                                omnis totam provident qui ab ducimus esse, ratione ut quibusdam 
+                                commodi, iure odio!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Porro illum quae veniam consectetur iusto quam deleniti tempore, 
+                                omnis totam provident qui ab ducimus esse, ratione ut quibusdam 
+                                
+                            </div>
+                        </div>
+                        <div class="preview-item-details-info">
+                            
+                        </div>
+
+                        <div class="preview-item-rating-info">
+                            <div class="swiper mySwiper4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="preview-item-rating-content">
+                                            <h3>Customer 1</h3>
+                                            <div class="preview-item-customer-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="preview-item-reviews">
+                                                Reviewssssssssssssssssssss Lorem ipsum dolor sit amet, consect
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Reviewssssssssssssssssssss Lorem ipsum dolor sit amet, consect
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="preview-item-rating-content">
+                                            <h3>Customer 2</h3>
+                                            <div class="preview-item-customer-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="preview-item-reviews">
+                                                Reviewssssssssssssssssssss Lorem ipsum dolor sit amet, consect
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Reviewssssssssssssssssssss Lorem ipsum dolor sit amet, consect
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="preview-item-rating-content">
+                                            <h3>Customer 3</h3>
+                                            <div class="preview-item-customer-rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <div class="preview-item-reviews">
+                                                Reviewssssssssssssssssssss Lorem ipsum dolor sit amet, consect
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Reviewssssssssssssssssssss Lorem ipsum dolor sit amet, consect
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-button-next swiper-button-next4"></div>
+                                <div class="swiper-button-prev swiper-button-prev4"></div>
+                                <div class="swiper-pagination swiper-pagination4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-item-buttons">
+                        <i class="fa fa-archive"></i>
+                        <i class="fa fa-shopping-cart" onclick="showTextBox()"></i>
+                        <button class="preview-item-save-btn">Save</button> 
+                        <button class="preview-item-cart-btn">Add to Cart</button>
+                        <div class="preview-item-quantity">
+                            <input type="text" placeholder="0" value="">
+                            <button onclick="closeTextBox()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('bottom.ejs') %>
+    </body>
+
+</html>

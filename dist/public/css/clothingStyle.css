@@ -20,6 +20,7 @@ html, body{
 .clothings-header {
     margin-top: 3em;
     text-align: center;
+    margin-bottom: 1.5em;
 }
 
 .clothings-header h2{
@@ -36,6 +37,10 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.num-of-results > p {
+    font-size: 1.1em;
 }
 
 .fa-sliders {
@@ -241,7 +246,7 @@ html, body{
     left: 25%;
     right: 25%;
     height: 1.2em;
-    background-color: #fbcdcd;
+    background-color: #ffffff;
 }
 
 .price-input {
@@ -297,10 +302,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .apply-btn { 
-    color: #ffffff;
+    /* color: #ffffff; */
     padding: 10px;
     cursor: pointer;
-    background: rgb(234, 208, 162);
+    background-color:   rgb(246, 246, 246);
 }
 
 .load-more {
