@@ -42,14 +42,14 @@ exports.loadClothings = (req, res, next) => {
                 console.log("Connection ended");
             });
         }
-        getQuery(`SELECT * FROM ecom_products.products
+        getQuery(`SELECT * FROM products
                     WHERE category = $1
                     AND id >= $2
                     ORDER BY id ASC
                     LIMIT $3`);
         return;
     })
-    .catch(e => console.log("Error in connection: \n" + e)); 
+    .catch(e => console.log("Error in connection: \n" + e));
     // res.render(req.params.page);
     // res.json(result);
 
